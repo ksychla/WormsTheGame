@@ -8,15 +8,15 @@
 #include "MeshFactory.h"
 
 #include "ShaderProgram.h"
-void checkKeyStates(){
-
-}
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
     auto myApplication = (Application*)glfwGetWindowUserPointer(window);
     if (key == GLFW_KEY_E && action == GLFW_PRESS){
-
+        myApplication->currentCamera = &myApplication->camera;
+    }
+    if (key == GLFW_KEY_R && action == GLFW_PRESS){
+        myApplication->currentCamera = &myApplication->onKeyRotationCamera;
     }
 }
 
@@ -40,7 +40,7 @@ void window_size_callback(GLFWwindow* window, int width, int height)
 
 }
 
-static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
+void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 {
     auto myApplication = (Application*)glfwGetWindowUserPointer(window);
 
@@ -63,6 +63,8 @@ Application::Application(GLFWwindow *window) : window(window) {
     glfwSetMouseButtonCallback(window, mouse_button_callback);
 
     glfwSetWindowUserPointer(window, this);
+
+    currentCamera = &camera;
 }
 
 Application::~Application() {
@@ -138,14 +140,14 @@ void Application::mainLoop() {
     while(!glfwWindowShouldClose(window)) {
         time2 = glfwGetTime();
         timePassed = time2 - time1;
-        //camera.move(window, timePassed);
+        currentCamera->move(window, timePassed);
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(0.5));
         M = glm::translate(M, glm::vec3(2.f,0.f,-1.f) );
-        MVP = P * M;
+        MVP = P * currentCamera->getView() * M;
         glUniformMatrix4fv(simpleColour.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
 
         triangle.bind();
@@ -155,7 +157,7 @@ void Application::mainLoop() {
         M = glm::mat4(1.f);
         M = glm::translate(M, glm::vec3(0.f,0.f, -4.f) );
         M = glm::rotate(M, 30.f, glm::vec3(1.f,1.f,0.f) );
-        MVP = P * M;
+        MVP = P * currentCamera->getView() * M;
         glUniformMatrix4fv(simpleColour.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
 
         cube.bind();

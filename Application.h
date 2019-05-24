@@ -12,9 +12,15 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "ShaderProgram.h"
+#include "Camera.h"
+#include "OnKeyRotationCamera.h"
 
 class Application {
-
+    friend void key_callback(GLFWwindow*, int, int, int, int);
+    friend void window_focus_callback(GLFWwindow*, int);
+    friend void window_size_callback(GLFWwindow*, int, int);
+    friend void cursor_position_callback(GLFWwindow*, double, double);
+    friend void mouse_button_callback(GLFWwindow*, int, int, int);
 public:
     Application(GLFWwindow *window);
 
@@ -23,6 +29,10 @@ public:
 
 private:
     void setRenderBehaviour();
+
+    Camera camera;
+    OnKeyRotationCamera onKeyRotationCamera;
+    Camera* currentCamera;
 
     ShaderProgram simpleColour;
 

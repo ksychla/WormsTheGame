@@ -66,3 +66,47 @@ Mesh::~Mesh() {
     glDeleteVertexArrays(1,&vao);
     glDeleteBuffers(5,vbo);
 }
+
+void Mesh::bind() { glBindVertexArray(vao); }
+
+void Mesh::unbind() { glBindVertexArray(0); }
+
+void Mesh::bindPos() { glBindVertexArray(vao);
+    glEnableVertexAttribArray(posVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::unbindPos() { glBindVertexArray(vao);
+    glDisableVertexAttribArray(posVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::bindCol() { glBindVertexArray(vao);
+    glEnableVertexAttribArray(colVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::unbindCol() { glBindVertexArray(vao);
+    glDisableVertexAttribArray(colVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::bindNorm() { glBindVertexArray(vao);
+    glEnableVertexAttribArray(normVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::unbindNorm() { glBindVertexArray(vao);
+    glDisableVertexAttribArray(normVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::bindUvs() { glBindVertexArray(vao);
+    glEnableVertexAttribArray(uvsVB);
+    glBindVertexArray(0);
+}
+
+void Mesh::unbindUvs() { glBindVertexArray(vao);
+    glDisableVertexAttribArray(uvsVB);
+    glBindVertexArray(0);
+}

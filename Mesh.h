@@ -14,8 +14,20 @@ class Mesh {
 public:
     virtual ~Mesh();;
 
-    void bind() { glBindVertexArray(vao); }
-    void unbind() { glBindVertexArray(0); }
+    void bind();
+    void unbind();
+
+    void bindPos();
+    void unbindPos();
+
+    void bindCol();
+    void unbindCol();
+
+    void bindNorm();
+    void unbindNorm();
+
+    void bindUvs();
+    void unbindUvs();
 
     unsigned int getVertexCount() const { return vertexCount; }
 
@@ -51,6 +63,7 @@ private:
     const unsigned int colVB  = 1;
     const unsigned int uvsVB  = 2;
     const unsigned int normVB = 3;
+
     const unsigned int indVB  = 4;
 };
 
