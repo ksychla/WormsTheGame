@@ -1,0 +1,3 @@
+/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir
