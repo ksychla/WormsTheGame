@@ -23,7 +23,7 @@ public:
             const char* vertex,
             const char* geometry,
             const char* fragment
-            );
+    );
 
     void use(){ glUseProgram(programName); }
     void freeProgram();
