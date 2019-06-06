@@ -3,6 +3,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/MeshFactory.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Application.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Camera.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o"
   "OpenGlSetup.pdb"
   "OpenGlSetup"
 )

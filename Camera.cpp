@@ -14,10 +14,10 @@ glm::mat4 Camera::getView() {
 void Camera::move(GLFWwindow *window, float timePassed) {
     glm::vec3 dir = glm::vec3(0);
 
-    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) dir += front ;
-    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) dir += left ;
-    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) dir += -front ;
-    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) dir += -left ;
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front ;
+    if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) dir += left ;
+    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front ;
+    if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) dir += -left ;
 
     pos+= dir * timePassed;
 }

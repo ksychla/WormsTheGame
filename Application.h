@@ -34,7 +34,7 @@ private:
     OnKeyRotationCamera onKeyRotationCamera;
     Camera* currentCamera;
 
-    ShaderProgram simpleColour;
+    ShaderProgram simpleColor;
 
     GLFWwindow* window;
 };

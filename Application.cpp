@@ -6,6 +6,7 @@
 
 #include "Mesh.h"
 #include "MeshFactory.h"
+#include "Terrain.h"
 
 #include "ShaderProgram.h"
 
@@ -71,56 +72,15 @@ Application::~Application() {
 }
 
 void Application::mainLoop() {
-    Mesh triangle = MeshFactory()
-            .addPos( glm::vec3(-1.0f, -1.0f, 0.0f) )
-            .addPos( glm::vec3( 1.0f, -1.0f, 0.0f) )
-            .addPos( glm::vec3( 0.0f,  1.0f, 0.0f) )
-            .addCol( glm::vec3( 0, 0, 0) )
-            .addCol( glm::vec3( 1, 0, 1) )
-            .addCol( glm::vec3( 1, 1, 1) )
-            .addInd( 0, 1, 2 )
-            .create();
 
-    Mesh cube = MeshFactory()
-            .addPos( glm::vec3(-1, -1, -1) )
-            .addPos( glm::vec3( 1, -1, -1) )
-            .addPos( glm::vec3( 1,  1, -1) )
-            .addPos( glm::vec3(-1,  1, -1) )
-            .addPos( glm::vec3(-1, -1,  1) )
-            .addPos( glm::vec3( 1, -1,  1) )
-            .addPos( glm::vec3( 1,  1,  1) )
-            .addPos( glm::vec3(-1,  1,  1) )
-
-            .addCol( glm::vec3(0,0,0) )
-            .addCol( glm::vec3(0,0,1) )
-            .addCol( glm::vec3(0,1,0) )
-            .addCol( glm::vec3(0,1,1) )
-            .addCol( glm::vec3(1,0,0) )
-            .addCol( glm::vec3(1,0,1) )
-            .addCol( glm::vec3(1,1,0) )
-            .addCol( glm::vec3(1,1,1) )
-
-            .addInd(0, 1, 3)
-            .addInd(3, 1, 2)
-            .addInd(1, 5, 2)
-            .addInd(2, 5, 6)
-            .addInd(5, 4, 6)
-            .addInd(6, 4, 7)
-            .addInd(4, 0, 7)
-            .addInd(7, 0, 3)
-            .addInd(3, 2, 7)
-            .addInd(7, 2, 6)
-            .addInd(4, 5, 0)
-            .addInd(0, 5, 1)
-
-            .create();
+    Terrain terrain(1,1);
+    Mesh t = terrain.drawTerrain();
 
 
-
-    simpleColour.loadProgram("../Shaders/SimpleColour/",
+    simpleColor.loadProgram("../Shaders/SimpleColour/",
                              "vertex.glsl", nullptr, "fragment.glsl");
 
-    simpleColour.use();
+    simpleColor.use();
 
 
 
@@ -146,23 +106,23 @@ void Application::mainLoop() {
 
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(0.5));
-        M = glm::translate(M, glm::vec3(2.f,0.f,-1.f) );
+        M = glm::translate(M, glm::vec3(-4.5f,-2.f,-10.f) );
         MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(simpleColour.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(simpleColor.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
 
-        triangle.bind();
+        t.bind();
 
-        glDrawElements(GL_TRIANGLES, triangle.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+        glDrawElements(GL_TRIANGLES, t.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
-        M = glm::mat4(1.f);
-        M = glm::translate(M, glm::vec3(0.f,0.f, -4.f) );
-        M = glm::rotate(M, 30.f, glm::vec3(1.f,1.f,0.f) );
-        MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(simpleColour.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-
-        cube.bind();
-
-        glDrawElements(GL_TRIANGLES, cube.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+//        M = glm::mat4(1.f);
+//        M = glm::translate(M, glm::vec3(0.f,0.f, -4.f) );
+//        M = glm::rotate(M, 30.f, glm::vec3(1.f,1.f,0.f) );
+//        MVP = P * currentCamera->getView() * M;
+//        glUniformMatrix4fv(simpleColor.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+//
+//        cube.bind();
+//
+//        glDrawElements(GL_TRIANGLES, cube.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -170,15 +130,15 @@ void Application::mainLoop() {
         time1 = time2;
     };
 
-    simpleColour.freeProgram();
+    simpleColor.freeProgram();
 }
 
 void Application::setRenderBehaviour() {
     glEnable(GL_DEPTH_TEST);
 
-    glClearColor(0.f,
-                 0.f,
-                 1.f,
+    glClearColor(0.22f,
+                 0.69f,
+                 0.87f,
                  1.f
     );
 }

@@ -123,6 +123,60 @@ OpenGlSetup/fast:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/build
 .PHONY : OpenGlSetup/fast
 
+Application.o: Application.cpp.o
+
+.PHONY : Application.o
+
+# target to build an object file
+Application.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Application.cpp.o
+.PHONY : Application.cpp.o
+
+Application.i: Application.cpp.i
+
+.PHONY : Application.i
+
+# target to preprocess a source file
+Application.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Application.cpp.i
+.PHONY : Application.cpp.i
+
+Application.s: Application.cpp.s
+
+.PHONY : Application.s
+
+# target to generate assembly for a file
+Application.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Application.cpp.s
+.PHONY : Application.cpp.s
+
+Camera.o: Camera.cpp.o
+
+.PHONY : Camera.o
+
+# target to build an object file
+Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Camera.cpp.o
+.PHONY : Camera.cpp.o
+
+Camera.i: Camera.cpp.i
+
+.PHONY : Camera.i
+
+# target to preprocess a source file
+Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Camera.cpp.i
+.PHONY : Camera.cpp.i
+
+Camera.s: Camera.cpp.s
+
+.PHONY : Camera.s
+
+# target to generate assembly for a file
+Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Camera.cpp.s
+.PHONY : Camera.cpp.s
+
 Mesh.o: Mesh.cpp.o
 
 .PHONY : Mesh.o
@@ -177,6 +231,33 @@ MeshFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/MeshFactory.cpp.s
 .PHONY : MeshFactory.cpp.s
 
+OnKeyRotationCamera.o: OnKeyRotationCamera.cpp.o
+
+.PHONY : OnKeyRotationCamera.o
+
+# target to build an object file
+OnKeyRotationCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o
+.PHONY : OnKeyRotationCamera.cpp.o
+
+OnKeyRotationCamera.i: OnKeyRotationCamera.cpp.i
+
+.PHONY : OnKeyRotationCamera.i
+
+# target to preprocess a source file
+OnKeyRotationCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.i
+.PHONY : OnKeyRotationCamera.cpp.i
+
+OnKeyRotationCamera.s: OnKeyRotationCamera.cpp.s
+
+.PHONY : OnKeyRotationCamera.s
+
+# target to generate assembly for a file
+OnKeyRotationCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.s
+.PHONY : OnKeyRotationCamera.cpp.s
+
 ShaderProgram.o: ShaderProgram.cpp.o
 
 .PHONY : ShaderProgram.o
@@ -203,6 +284,33 @@ ShaderProgram.s: ShaderProgram.cpp.s
 ShaderProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.s
 .PHONY : ShaderProgram.cpp.s
+
+Terrain.o: Terrain.cpp.o
+
+.PHONY : Terrain.o
+
+# target to build an object file
+Terrain.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o
+.PHONY : Terrain.cpp.o
+
+Terrain.i: Terrain.cpp.i
+
+.PHONY : Terrain.i
+
+# target to preprocess a source file
+Terrain.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Terrain.cpp.i
+.PHONY : Terrain.cpp.i
+
+Terrain.s: Terrain.cpp.s
+
+.PHONY : Terrain.s
+
+# target to generate assembly for a file
+Terrain.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s
+.PHONY : Terrain.cpp.s
 
 main.o: main.cpp.o
 
@@ -240,15 +348,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... OpenGlSetup"
+	@echo "... Application.o"
+	@echo "... Application.i"
+	@echo "... Application.s"
+	@echo "... Camera.o"
+	@echo "... Camera.i"
+	@echo "... Camera.s"
 	@echo "... Mesh.o"
 	@echo "... Mesh.i"
 	@echo "... Mesh.s"
 	@echo "... MeshFactory.o"
 	@echo "... MeshFactory.i"
 	@echo "... MeshFactory.s"
+	@echo "... OnKeyRotationCamera.o"
+	@echo "... OnKeyRotationCamera.i"
+	@echo "... OnKeyRotationCamera.s"
 	@echo "... ShaderProgram.o"
 	@echo "... ShaderProgram.i"
 	@echo "... ShaderProgram.s"
+	@echo "... Terrain.o"
+	@echo "... Terrain.i"
+	@echo "... Terrain.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
