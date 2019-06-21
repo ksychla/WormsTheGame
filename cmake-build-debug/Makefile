@@ -258,6 +258,33 @@ OnKeyRotationCamera.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.s
 .PHONY : OnKeyRotationCamera.cpp.s
 
+Parser.o: Parser.cpp.o
+
+.PHONY : Parser.o
+
+# target to build an object file
+Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Parser.cpp.o
+.PHONY : Parser.cpp.o
+
+Parser.i: Parser.cpp.i
+
+.PHONY : Parser.i
+
+# target to preprocess a source file
+Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Parser.cpp.i
+.PHONY : Parser.cpp.i
+
+Parser.s: Parser.cpp.s
+
+.PHONY : Parser.s
+
+# target to generate assembly for a file
+Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Parser.cpp.s
+.PHONY : Parser.cpp.s
+
 ShaderProgram.o: ShaderProgram.cpp.o
 
 .PHONY : ShaderProgram.o
@@ -312,6 +339,33 @@ Terrain.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s
 .PHONY : Terrain.cpp.s
 
+generateHeight.o: generateHeight.cpp.o
+
+.PHONY : generateHeight.o
+
+# target to build an object file
+generateHeight.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o
+.PHONY : generateHeight.cpp.o
+
+generateHeight.i: generateHeight.cpp.i
+
+.PHONY : generateHeight.i
+
+# target to preprocess a source file
+generateHeight.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.i
+.PHONY : generateHeight.cpp.i
+
+generateHeight.s: generateHeight.cpp.s
+
+.PHONY : generateHeight.s
+
+# target to generate assembly for a file
+generateHeight.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.s
+.PHONY : generateHeight.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -363,12 +417,18 @@ help:
 	@echo "... OnKeyRotationCamera.o"
 	@echo "... OnKeyRotationCamera.i"
 	@echo "... OnKeyRotationCamera.s"
+	@echo "... Parser.o"
+	@echo "... Parser.i"
+	@echo "... Parser.s"
 	@echo "... ShaderProgram.o"
 	@echo "... ShaderProgram.i"
 	@echo "... ShaderProgram.s"
 	@echo "... Terrain.o"
 	@echo "... Terrain.i"
 	@echo "... Terrain.s"
+	@echo "... generateHeight.o"
+	@echo "... generateHeight.i"
+	@echo "... generateHeight.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -73,8 +73,9 @@ Application::~Application() {
 
 void Application::mainLoop() {
 
-    Terrain terrain(1,1);
+    Terrain terrain(1,1,5);
     Mesh t = terrain.drawTerrain();
+
 
 
     simpleColor.loadProgram("../Shaders/SimpleColour/",
@@ -109,6 +110,10 @@ void Application::mainLoop() {
         M = glm::translate(M, glm::vec3(-4.5f,-2.f,-10.f) );
         MVP = P * currentCamera->getView() * M;
         glUniformMatrix4fv(simpleColor.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(simpleColor.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
+        glUniformMatrix4fv(simpleColor.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(simpleColor.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+        glUniform4f(simpleColor.getU("lp"),100,0,-100,1);
 
         t.bind();
 

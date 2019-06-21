@@ -116,6 +116,12 @@
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Parser.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Parser.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
@@ -126,6 +132,12 @@
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Terrain.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/main.cpp">

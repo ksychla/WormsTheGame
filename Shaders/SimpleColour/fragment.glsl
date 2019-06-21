@@ -2,6 +2,10 @@
 
 in vec3 iColor;
 
+//in vec4 l;
+//in vec4 n;
+//in vec4 v;
+
 layout(location = 0) out vec4 out_Color;
 
 void main() {

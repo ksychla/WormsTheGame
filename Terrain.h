@@ -9,10 +9,12 @@
 #include <GL/glew.h>
 #include "Mesh.h"
 #include "MeshFactory.h"
+#include "generateHeight.h"
+//#include "TerrainVertex.h"
 
 class Terrain {
 public:
-    Terrain(int gridX, int gridZ);
+    Terrain(int gridX, int gridZ, int gridY);
 
     Mesh drawTerrain();
 
@@ -32,11 +34,15 @@ public:
 
     void setZ(float z);
 
+
+
 private:
     int size;
     int vertexCount;
-    float x;
-    float z;
+    int x;
+    int z;
+    int maxY;
+    generateHeight* height = new generateHeight(10.0);
 //    float **y;
     float y[10][10]={
             {0,0,0,1,1,1,0,0,0,0},
@@ -50,6 +56,10 @@ private:
             {0,0,0,1,1,1,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0}
     };
+    glm::vec3 normals[10][10];
+
+    glm::vec3 generateNormals(int x, int z);
+    float getHeight(int x, int z);
 };
 
 

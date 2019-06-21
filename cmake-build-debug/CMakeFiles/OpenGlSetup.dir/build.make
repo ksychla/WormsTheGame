@@ -161,6 +161,32 @@ CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/Terrain.cpp -o CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s
 
+CMakeFiles/OpenGlSetup.dir/Parser.cpp.o: CMakeFiles/OpenGlSetup.dir/flags.make
+CMakeFiles/OpenGlSetup.dir/Parser.cpp.o: ../Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OpenGlSetup.dir/Parser.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGlSetup.dir/Parser.cpp.o -c /Users/krzysztof/Documents/ProjektGrafika/Parser.cpp
+
+CMakeFiles/OpenGlSetup.dir/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlSetup.dir/Parser.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krzysztof/Documents/ProjektGrafika/Parser.cpp > CMakeFiles/OpenGlSetup.dir/Parser.cpp.i
+
+CMakeFiles/OpenGlSetup.dir/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/Parser.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/Parser.cpp -o CMakeFiles/OpenGlSetup.dir/Parser.cpp.s
+
+CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o: CMakeFiles/OpenGlSetup.dir/flags.make
+CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o: ../generateHeight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o -c /Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp
+
+CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp > CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.i
+
+CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp -o CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.s
+
 # Object files for target OpenGlSetup
 OpenGlSetup_OBJECTS = \
 "CMakeFiles/OpenGlSetup.dir/main.cpp.o" \
@@ -170,7 +196,9 @@ OpenGlSetup_OBJECTS = \
 "CMakeFiles/OpenGlSetup.dir/Application.cpp.o" \
 "CMakeFiles/OpenGlSetup.dir/Camera.cpp.o" \
 "CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o" \
-"CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o"
+"CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o" \
+"CMakeFiles/OpenGlSetup.dir/Parser.cpp.o" \
+"CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o"
 
 # External object files for target OpenGlSetup
 OpenGlSetup_EXTERNAL_OBJECTS =
@@ -183,11 +211,13 @@ OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Application.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Camera.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o
+OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Parser.cpp.o
+OpenGlSetup: CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/build.make
 OpenGlSetup: /usr/local/lib/libGLEW.dylib
 OpenGlSetup: /usr/local/lib/libglfw.3.3.dylib
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable OpenGlSetup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable OpenGlSetup"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGlSetup.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGlSetup.dir/Camera.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Parser.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o"
   "OpenGlSetup.pdb"
   "OpenGlSetup"
 )
