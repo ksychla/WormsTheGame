@@ -42,7 +42,7 @@ private:
     int x;
     int z;
     int maxY;
-    generateHeight* height = new generateHeight(10.0);
+    generateHeight* height = new generateHeight(20.0);
 //    float **y;
     float y[10][10]={
             {0,0,0,1,1,1,0,0,0,0},

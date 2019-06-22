@@ -7,6 +7,9 @@
 #include "Mesh.h"
 #include "MeshFactory.h"
 #include "Terrain.h"
+#include "Texture.h"
+#include "Water.h"
+#include "Parser.h"
 
 #include "ShaderProgram.h"
 
@@ -52,7 +55,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     auto myApplication = (Application*)glfwGetWindowUserPointer(window);
 
     if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS){
-
+        printf("halo");
     }
 }
 
@@ -75,6 +78,20 @@ void Application::mainLoop() {
 
     Terrain terrain(1,1,5);
     Mesh t = terrain.drawTerrain();
+
+    Water water(500);
+    Mesh w = water.createWater();
+
+    Texture texture("Textures/Grass.jpg");
+    GLuint tex = texture.readTexture();
+
+//    Wczytywanie bałwana
+
+    Parser* parser = new Parser();
+
+    Mesh missel = parser->getOBJ("../Models/snowman.obj");
+
+
 
 
 
@@ -107,18 +124,30 @@ void Application::mainLoop() {
 
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(0.5));
-        M = glm::translate(M, glm::vec3(-4.5f,-2.f,-10.f) );
+        M = glm::translate(M, glm::vec3(0.f,0.f,0.f) );
         MVP = P * currentCamera->getView() * M;
         glUniformMatrix4fv(simpleColor.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
         glUniformMatrix4fv(simpleColor.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(simpleColor.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(simpleColor.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(simpleColor.getU("lp"),100,0,-100,1);
+        glUniform4f(simpleColor.getU("lp"),0,0,-100,1);
+
+//        glUniform1i(simpleColor.getU("textureMap"),0);
+//        glActiveTexture(GL_TEXTURE0);
+//        glBindTexture(GL_TEXTURE_2D,tex);
+
+//        glEnableVertexAttribArray(simpleColor.getU("texCoord"));  //Włącz przesyłanie danych do atrybutu texCoord0
+//        glVertexAttribPointer(simpleColor.getU("texCoord"),2,GL_FLOAT,false,0,texCoords); //Wskaż tablicę z danymi dla atrybutu texCoord0
+
 
         t.bind();
-
         glDrawElements(GL_TRIANGLES, t.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
+        w.bind();
+        glDrawElements(GL_TRIANGLES, w.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+
+        missel.bind();
+        glDrawElements(GL_TRIANGLES, missel.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 //        M = glm::mat4(1.f);
 //        M = glm::translate(M, glm::vec3(0.f,0.f, -4.f) );
 //        M = glm::rotate(M, 30.f, glm::vec3(1.f,1.f,0.f) );

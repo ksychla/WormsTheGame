@@ -13,13 +13,23 @@ glm::mat4 Camera::getView() {
 
 void Camera::move(GLFWwindow *window, float timePassed) {
     glm::vec3 dir = glm::vec3(0);
+    float rotate_up = 0;
+    float rotate_left = 0;
+    float rotationSpeed = 2.f;
 
-    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front ;
-    if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) dir += left ;
-    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front ;
-    if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) dir += -left ;
+
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front*5.f ;
+    if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed ;
+    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front*5.f ;
+    if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left += -rotationSpeed ;
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) rotate_up -= rotationSpeed;
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) rotate_up += rotationSpeed;
 
     pos+= dir * timePassed;
+    glm::mat4 rotate = glm::mat4(1);
+    rotate = glm::rotate(rotate, rotate_left * timePassed, up );
+    rotate = glm::rotate(rotate, rotate_up * timePassed, left );
+    applyRotation(rotate);
 }
 
 void Camera::applyRotation(glm::mat4 rotation) {

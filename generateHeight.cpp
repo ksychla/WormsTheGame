@@ -10,12 +10,14 @@ generateHeight::generateHeight(float amplituda) : amplituda(amplituda) {
 }
 
 float generateHeight::height(int x, int z) {
-    return getInterpolatedNoise(x/10.f,z/10.f) * amplituda;
+    float total = getInterpolatedNoise(x/4.f,z/4.f) * amplituda;
+    total += getInterpolatedNoise(x/2.f,z/2.f) * amplituda / 3.f;
+    return total;
 }
 
 float generateHeight::getNoise(int x, int z) {
     srand(x * 17788 + z * 35267 + seed);
-    return ((float)(rand()%10000)/10000)*2 - 1;
+    return ((float)(rand()%10000)/10000);
 }
 
 float generateHeight::getSmoothNoise(int x, int z){

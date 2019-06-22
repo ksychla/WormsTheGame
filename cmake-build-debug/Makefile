@@ -285,6 +285,33 @@ Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
+Pocisk.o: Pocisk.cpp.o
+
+.PHONY : Pocisk.o
+
+# target to build an object file
+Pocisk.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o
+.PHONY : Pocisk.cpp.o
+
+Pocisk.i: Pocisk.cpp.i
+
+.PHONY : Pocisk.i
+
+# target to preprocess a source file
+Pocisk.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.i
+.PHONY : Pocisk.cpp.i
+
+Pocisk.s: Pocisk.cpp.s
+
+.PHONY : Pocisk.s
+
+# target to generate assembly for a file
+Pocisk.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.s
+.PHONY : Pocisk.cpp.s
+
 ShaderProgram.o: ShaderProgram.cpp.o
 
 .PHONY : ShaderProgram.o
@@ -311,6 +338,33 @@ ShaderProgram.s: ShaderProgram.cpp.s
 ShaderProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.s
 .PHONY : ShaderProgram.cpp.s
+
+Snowman.o: Snowman.cpp.o
+
+.PHONY : Snowman.o
+
+# target to build an object file
+Snowman.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o
+.PHONY : Snowman.cpp.o
+
+Snowman.i: Snowman.cpp.i
+
+.PHONY : Snowman.i
+
+# target to preprocess a source file
+Snowman.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Snowman.cpp.i
+.PHONY : Snowman.cpp.i
+
+Snowman.s: Snowman.cpp.s
+
+.PHONY : Snowman.s
+
+# target to generate assembly for a file
+Snowman.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Snowman.cpp.s
+.PHONY : Snowman.cpp.s
 
 Terrain.o: Terrain.cpp.o
 
@@ -339,6 +393,60 @@ Terrain.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Terrain.cpp.s
 .PHONY : Terrain.cpp.s
 
+Texture.o: Texture.cpp.o
+
+.PHONY : Texture.o
+
+# target to build an object file
+Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Texture.cpp.o
+.PHONY : Texture.cpp.o
+
+Texture.i: Texture.cpp.i
+
+.PHONY : Texture.i
+
+# target to preprocess a source file
+Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Texture.cpp.i
+.PHONY : Texture.cpp.i
+
+Texture.s: Texture.cpp.s
+
+.PHONY : Texture.s
+
+# target to generate assembly for a file
+Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Texture.cpp.s
+.PHONY : Texture.cpp.s
+
+Water.o: Water.cpp.o
+
+.PHONY : Water.o
+
+# target to build an object file
+Water.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Water.cpp.o
+.PHONY : Water.cpp.o
+
+Water.i: Water.cpp.i
+
+.PHONY : Water.i
+
+# target to preprocess a source file
+Water.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Water.cpp.i
+.PHONY : Water.cpp.i
+
+Water.s: Water.cpp.s
+
+.PHONY : Water.s
+
+# target to generate assembly for a file
+Water.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Water.cpp.s
+.PHONY : Water.cpp.s
+
 generateHeight.o: generateHeight.cpp.o
 
 .PHONY : generateHeight.o
@@ -365,6 +473,33 @@ generateHeight.s: generateHeight.cpp.s
 generateHeight.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.s
 .PHONY : generateHeight.cpp.s
+
+lodepng.o: lodepng.cpp.o
+
+.PHONY : lodepng.o
+
+# target to build an object file
+lodepng.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o
+.PHONY : lodepng.cpp.o
+
+lodepng.i: lodepng.cpp.i
+
+.PHONY : lodepng.i
+
+# target to preprocess a source file
+lodepng.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/lodepng.cpp.i
+.PHONY : lodepng.cpp.i
+
+lodepng.s: lodepng.cpp.s
+
+.PHONY : lodepng.s
+
+# target to generate assembly for a file
+lodepng.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/lodepng.cpp.s
+.PHONY : lodepng.cpp.s
 
 main.o: main.cpp.o
 
@@ -420,15 +555,30 @@ help:
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"
+	@echo "... Pocisk.o"
+	@echo "... Pocisk.i"
+	@echo "... Pocisk.s"
 	@echo "... ShaderProgram.o"
 	@echo "... ShaderProgram.i"
 	@echo "... ShaderProgram.s"
+	@echo "... Snowman.o"
+	@echo "... Snowman.i"
+	@echo "... Snowman.s"
 	@echo "... Terrain.o"
 	@echo "... Terrain.i"
 	@echo "... Terrain.s"
+	@echo "... Texture.o"
+	@echo "... Texture.i"
+	@echo "... Texture.s"
+	@echo "... Water.o"
+	@echo "... Water.i"
+	@echo "... Water.s"
 	@echo "... generateHeight.o"
 	@echo "... generateHeight.i"
 	@echo "... generateHeight.s"
+	@echo "... lodepng.o"
+	@echo "... lodepng.i"
+	@echo "... lodepng.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

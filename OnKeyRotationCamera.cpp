@@ -18,6 +18,7 @@ void OnKeyRotationCamera::move(GLFWwindow *window, float timePassed) {
     if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed ;
     if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) rotate_up -= rotationSpeed ;
     if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left -= rotationSpeed ;
+//    if(glfwGetKey(window, GLFW_))
 
 
 

@@ -9,6 +9,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/Parser.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Texture.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Water.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o"
   "OpenGlSetup.pdb"
   "OpenGlSetup"
 )

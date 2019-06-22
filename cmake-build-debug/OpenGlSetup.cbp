@@ -122,10 +122,22 @@
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Parser.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Pocisk.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Pocisk.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Snowman.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Snowman.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Terrain.cpp">
@@ -134,10 +146,28 @@
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Terrain.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Texture.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Texture.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Water.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Water.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/lodepng.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/lodepng.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/main.cpp">

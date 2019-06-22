@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/Modules/")
 message(CMAKE_MODULE_PATH : ${PROJECT_SOURCE_DIR}/Modules/)
 
-set(SOURCE_FILES main.cpp ShaderProgram.cpp ShaderProgram.h Mesh.cpp Mesh.h MeshFactory.cpp MeshFactory.h Application.cpp Application.h Camera.cpp Camera.h OnKeyRotationCamera.cpp OnKeyRotationCamera.h Terrain.cpp Terrain.h Parser.cpp Parser.h generateHeight.cpp generateHeight.h)
+set(SOURCE_FILES main.cpp ShaderProgram.cpp ShaderProgram.h Mesh.cpp Mesh.h MeshFactory.cpp MeshFactory.h Application.cpp Application.h Camera.cpp Camera.h OnKeyRotationCamera.cpp OnKeyRotationCamera.h Terrain.cpp Terrain.h Parser.cpp Parser.h generateHeight.cpp generateHeight.h Pocisk.cpp Pocisk.h Texture.cpp Texture.h lodepng.cpp lodepng.h Water.cpp Water.h Snowman.cpp Snowman.h)
 add_executable(OpenGlSetup ${SOURCE_FILES})
 
 find_package(glfw3 REQUIRED)
