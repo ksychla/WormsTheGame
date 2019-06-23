@@ -11,10 +11,14 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
+#include <unistd.h>
 
 #include "ShaderProgram.h"
 #include "Camera.h"
 #include "OnKeyRotationCamera.h"
+#include "FirstPersonCamera.h"
+#include "ThirdPersonCamera.h"
+#include "Snowman.h"
 
 class Application {
     friend void key_callback(GLFWwindow*, int, int, int, int);
@@ -30,9 +34,13 @@ public:
 
 private:
     void setRenderBehaviour();
+    void changeCamera(GLFWwindow *window, Snowman*);
 
+    int time;
+    bool whichCamera = 0;
     Camera camera;
-    OnKeyRotationCamera onKeyRotationCamera;
+    ThirdPersonCamera thirdPersonCamera;
+    FirstPersonCamera firstPersonCamera;
     Camera* currentCamera;
 
     ShaderProgram simpleColor;

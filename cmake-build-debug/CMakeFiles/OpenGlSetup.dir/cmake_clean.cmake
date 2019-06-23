@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/Water.cpp.o"
   "CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o"
+  "CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o"
   "OpenGlSetup.pdb"
   "OpenGlSetup"
 )

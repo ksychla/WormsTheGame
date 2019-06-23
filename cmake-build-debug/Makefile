@@ -177,6 +177,33 @@ Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Camera.cpp.s
 .PHONY : Camera.cpp.s
 
+FirstPersonCamera.o: FirstPersonCamera.cpp.o
+
+.PHONY : FirstPersonCamera.o
+
+# target to build an object file
+FirstPersonCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o
+.PHONY : FirstPersonCamera.cpp.o
+
+FirstPersonCamera.i: FirstPersonCamera.cpp.i
+
+.PHONY : FirstPersonCamera.i
+
+# target to preprocess a source file
+FirstPersonCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.i
+.PHONY : FirstPersonCamera.cpp.i
+
+FirstPersonCamera.s: FirstPersonCamera.cpp.s
+
+.PHONY : FirstPersonCamera.s
+
+# target to generate assembly for a file
+FirstPersonCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.s
+.PHONY : FirstPersonCamera.cpp.s
+
 Mesh.o: Mesh.cpp.o
 
 .PHONY : Mesh.o
@@ -420,6 +447,33 @@ Texture.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/Texture.cpp.s
 .PHONY : Texture.cpp.s
 
+ThirdPersonCamera.o: ThirdPersonCamera.cpp.o
+
+.PHONY : ThirdPersonCamera.o
+
+# target to build an object file
+ThirdPersonCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o
+.PHONY : ThirdPersonCamera.cpp.o
+
+ThirdPersonCamera.i: ThirdPersonCamera.cpp.i
+
+.PHONY : ThirdPersonCamera.i
+
+# target to preprocess a source file
+ThirdPersonCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.i
+.PHONY : ThirdPersonCamera.cpp.i
+
+ThirdPersonCamera.s: ThirdPersonCamera.cpp.s
+
+.PHONY : ThirdPersonCamera.s
+
+# target to generate assembly for a file
+ThirdPersonCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGlSetup.dir/build.make CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.s
+.PHONY : ThirdPersonCamera.cpp.s
+
 Water.o: Water.cpp.o
 
 .PHONY : Water.o
@@ -543,6 +597,9 @@ help:
 	@echo "... Camera.o"
 	@echo "... Camera.i"
 	@echo "... Camera.s"
+	@echo "... FirstPersonCamera.o"
+	@echo "... FirstPersonCamera.i"
+	@echo "... FirstPersonCamera.s"
 	@echo "... Mesh.o"
 	@echo "... Mesh.i"
 	@echo "... Mesh.s"
@@ -570,6 +627,9 @@ help:
 	@echo "... Texture.o"
 	@echo "... Texture.i"
 	@echo "... Texture.s"
+	@echo "... ThirdPersonCamera.o"
+	@echo "... ThirdPersonCamera.i"
+	@echo "... ThirdPersonCamera.s"
 	@echo "... Water.o"
 	@echo "... Water.i"
 	@echo "... Water.s"

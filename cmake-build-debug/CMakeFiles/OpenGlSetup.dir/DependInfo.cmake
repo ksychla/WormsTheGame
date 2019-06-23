@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/krzysztof/Documents/ProjektGrafika/Application.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Camera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Camera.cpp.o"
+  "/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/MeshFactory.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/MeshFactory.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o"
@@ -15,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/krzysztof/Documents/ProjektGrafika/Snowman.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Terrain.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Texture.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Texture.cpp.o"
+  "/Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Water.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Water.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/lodepng.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o"

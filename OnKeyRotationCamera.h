@@ -9,7 +9,7 @@
 
 class OnKeyRotationCamera : public Camera{
 public:
-    void move(GLFWwindow *window, float timePassed) override;
+    void move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate) override;
 };
 
 

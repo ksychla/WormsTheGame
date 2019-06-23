@@ -7,15 +7,16 @@
 
 #include <glm/glm.hpp>
 #include <GL/glew.h>
+#include <GLFW/glfw3.h>
 #include <cmath>
 
 class Pocisk {
 public:
     Pocisk();
     ~Pocisk();
-    void strzal();
-    glm::vec4 pozycjaPocisku (glm::vec4 poprzednia, double czas);
-
+    void strzal(glm::vec3 posStart);
+    glm::vec4 pozycjaPocisku (glm::vec4 poprzednia, float czas);
+    void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 private:
     glm::vec3 wormPos;
     glm::vec2 wormAng;
@@ -24,6 +25,9 @@ private:
     float vY;
     float vZ;
     int flagaPocisku;
+    const float stalyPrzyrostSily;
+    const float maxSila;
+    float grawitacja = 9.81;
 };
 
 

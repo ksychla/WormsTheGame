@@ -252,6 +252,32 @@ CMakeFiles/OpenGlSetup.dir/Snowman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/Snowman.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/Snowman.cpp -o CMakeFiles/OpenGlSetup.dir/Snowman.cpp.s
 
+CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: CMakeFiles/OpenGlSetup.dir/flags.make
+CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: ../FirstPersonCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o -c /Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp
+
+CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp > CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.i
+
+CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp -o CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.s
+
+CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o: CMakeFiles/OpenGlSetup.dir/flags.make
+CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o: ../ThirdPersonCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o -c /Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp
+
+CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp > CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.i
+
+CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp -o CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.s
+
 # Object files for target OpenGlSetup
 OpenGlSetup_OBJECTS = \
 "CMakeFiles/OpenGlSetup.dir/main.cpp.o" \
@@ -268,7 +294,9 @@ OpenGlSetup_OBJECTS = \
 "CMakeFiles/OpenGlSetup.dir/Texture.cpp.o" \
 "CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o" \
 "CMakeFiles/OpenGlSetup.dir/Water.cpp.o" \
-"CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o"
+"CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o" \
+"CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o" \
+"CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o"
 
 # External object files for target OpenGlSetup
 OpenGlSetup_EXTERNAL_OBJECTS =
@@ -288,11 +316,13 @@ OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Texture.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/lodepng.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Water.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o
+OpenGlSetup: CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o
+OpenGlSetup: CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/build.make
 OpenGlSetup: /usr/local/lib/libGLEW.dylib
 OpenGlSetup: /usr/local/lib/libglfw.3.3.dylib
 OpenGlSetup: CMakeFiles/OpenGlSetup.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable OpenGlSetup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable OpenGlSetup"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGlSetup.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

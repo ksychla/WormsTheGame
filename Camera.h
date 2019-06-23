@@ -8,17 +8,18 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
+#include <stdio.h>
 //#include "Snowman.h"
 
 class Camera {
 public:
-    virtual void move(GLFWwindow* window, float timePassed);
+    virtual void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate);
     glm::mat4 getView();
-    void moveWithPlayer(glm::vec3 position, float rotate);
+//    virtual void moveWithPlayer(glm::vec3 position, float rotate);
 protected:
     void applyRotation(glm::mat4 rotation);
 
-    glm::vec3 pos = glm::vec3(0,4,15);
+    glm::vec3 pos = glm::vec3(0,4,30);
     glm::vec3 front = glm::vec3(0,0,-1);
     glm::vec3 up = glm::vec3(0,1,0);
     glm::vec3 left = glm::vec3(-1,0,0);

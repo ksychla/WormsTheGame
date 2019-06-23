@@ -6,8 +6,8 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 
-void OnKeyRotationCamera::move(GLFWwindow *window, float timePassed) {
-    Camera::move(window, timePassed);
+void OnKeyRotationCamera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate) {
+    Camera::move(window, timePassed, position, rotate);
 
     float rotate_left = 0;
     float rotate_up = 0;
@@ -22,9 +22,9 @@ void OnKeyRotationCamera::move(GLFWwindow *window, float timePassed) {
 
 
 
-    glm::mat4 rotate = glm::mat4(1);
-              rotate = glm::rotate(rotate, rotate_left * timePassed, up );
-              rotate = glm::rotate(rotate, rotate_up * timePassed, left );
+//    glm::mat4 rotate = glm::mat4(1);
+//              rotate = glm::rotate(rotate, rotate_left * timePassed, up );
+//              rotate = glm::rotate(rotate, rotate_up * timePassed, left );
 
 //    applyRotation(rotate);
 }

@@ -10,7 +10,7 @@
 #include "Texture.h"
 #include "Water.h"
 #include "Parser.h"
-#include "Snowman.h"
+
 
 #include "ShaderProgram.h"
 
@@ -21,7 +21,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         myApplication->currentCamera = &myApplication->camera;
     }
     if (key == GLFW_KEY_R && action == GLFW_PRESS){
-        myApplication->currentCamera = &myApplication->onKeyRotationCamera;
+//        myApplication->currentCamera = &myApplication->onKeyRotationCamera;
     }
 }
 
@@ -69,10 +69,25 @@ Application::Application(GLFWwindow *window) : window(window) {
 
     glfwSetWindowUserPointer(window, this);
 
-    currentCamera = &camera;
+    currentCamera = &thirdPersonCamera;
 }
 
 Application::~Application() {
+}
+
+void Application::changeCamera(GLFWwindow *window, Snowman* snowman){
+    auto myApplication = (Application*)glfwGetWindowUserPointer(window);
+
+    if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS){
+        if (whichCamera){
+            myApplication->currentCamera = &myApplication->firstPersonCamera;
+        }else{
+            myApplication->currentCamera = &myApplication->thirdPersonCamera;  // 3'rd person camera
+        }
+        whichCamera = !whichCamera;
+        time = 100;
+        snowman->changeCamera(myApplication->currentCamera);
+    }
 }
 
 void Application::mainLoop() {
@@ -118,10 +133,18 @@ void Application::mainLoop() {
     double time1 = glfwGetTime();
     double time2;
     double timePassed;
+
+
     while(!glfwWindowShouldClose(window)) {
         time2 = glfwGetTime();
         timePassed = time2 - time1;
-//        currentCamera->move(window, timePassed);
+
+        if(time == 0) {
+            changeCamera(window, snowman);
+        }else{
+            time--;
+        }
+
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -178,15 +201,7 @@ void Application::mainLoop() {
 
         missel.bind();
         glDrawElements(GL_TRIANGLES, missel.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-//        M = glm::mat4(1.f);
-//        M = glm::translate(M, glm::vec3(0.f,0.f, -4.f) );
-//        M = glm::rotate(M, 30.f, glm::vec3(1.f,1.f,0.f) );
-//        MVP = P * currentCamera->getView() * M;
-//        glUniformMatrix4fv(simpleColor.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-//
-//        cube.bind();
-//
-//        glDrawElements(GL_TRIANGLES, cube.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+
 
         glfwSwapBuffers(window);
         glfwPollEvents();

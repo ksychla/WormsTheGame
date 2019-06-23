@@ -98,6 +98,12 @@
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Camera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
@@ -150,6 +156,12 @@
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Texture.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Water.cpp">
