@@ -11,7 +11,6 @@
 class FirstPersonCamera : public Camera {
 public:
     void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate);
-//    void moveWithPlayer(glm::vec3 position, float rotate);
 };
 
 

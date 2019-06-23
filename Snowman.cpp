@@ -13,11 +13,11 @@ Snowman::Snowman(glm::vec3 position, Camera* cam) {
     camera = cam;
 }
 
-void Snowman::move(GLFWwindow* window, double timePassed){
+void Snowman::move(GLFWwindow* window, double timePassed, bool flaga){
     glm::vec3 dir = glm::vec3(0);
     float rotate_up = 0;
     float rotate_left = 0;
-    float rotationSpeed = 1000.f;
+    float rotationSpeed = 100.f;
 
     if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front*5.f ;
     if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed ;
@@ -27,13 +27,15 @@ void Snowman::move(GLFWwindow* window, double timePassed){
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) rotate_up += rotationSpeed;
 
 
-
-    rotation += rotate_left;
-    glm::mat4 rotate = glm::mat4(1);
-    rotate = glm::rotate(rotate, rotate_left / 100000, up );
+    if(flaga){
+        rotation += rotate_left;
+        glm::mat4 rotate = glm::mat4(1);
+        rotate = glm::rotate(rotate, rotate_left / 50000, up );
 //    rotate = glm::rotate(rotate, rotate_up * timePassed, left );
-    applyRotation(rotate);
-    pos+= dir * (float)timePassed;
+        applyRotation(rotate);
+        pos+= dir * (float)timePassed;
+    }
+
 
     camera->move(window, timePassed, pos, rotate_left);
 }

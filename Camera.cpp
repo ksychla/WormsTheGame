@@ -26,10 +26,6 @@ void Camera::move(GLFWwindow *window, float timePassed, glm::vec3 position, floa
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) rotate_up += rotationSpeed;
 
     pos+= dir * timePassed;
-//    glm::mat4 rotate = glm::mat4(1);
-//    rotate = glm::rotate(rotate, rotate_left * timePassed, up );
-//    rotate = glm::rotate(rotate, rotate_up * timePassed, left );
-//    applyRotation(rotate);
 }
 
 void Camera::applyRotation(glm::mat4 rotation) {
@@ -39,18 +35,3 @@ void Camera::applyRotation(glm::mat4 rotation) {
     left  = toVec3(rotation * glm::vec4(left ,1));
 }
 
-
-//void Camera::changeThePlayer(Snowman* s) { snowman = s; }
-
-//void Camera::moveWithPlayer(glm::vec3 position, float rotate) {
-//
-//
-//    glm::vec3 constPos = glm::vec3(0,4,30);
-//    pos = position + constPos;
-//
-//    glm::mat4 rotation = glm::mat4(1);
-//    rotation = glm::rotate(rotation, rotate / 100000, up );
-//    rotation = glm::rotate(rotation, 0.f, left );
-//    applyRotation(rotation);
-//
-//}

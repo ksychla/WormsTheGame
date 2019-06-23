@@ -9,8 +9,8 @@ void ThirdPersonCamera::move(GLFWwindow *window, float timePassed, glm::vec3 pos
     pos = position + constPos;
 
     glm::mat4 rotation = glm::mat4(1);
-    rotation = glm::rotate(rotation, rotate / 100000, up );
-    rotation = glm::rotate(rotation, 0.f, left );
+    rotation = glm::rotate(rotation, rotate / 50000, up );
+//    rotation = glm::rotate(rotation, 0.f, left );
     applyRotation(rotation);
 }
 

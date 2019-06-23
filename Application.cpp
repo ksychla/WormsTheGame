@@ -173,7 +173,7 @@ void Application::mainLoop() {
         glDrawElements(GL_TRIANGLES, w.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
 
-        snowman->move(window, timePassed);
+        snowman->move(window, timePassed, whichCamera);
 
         float tempRot = snowman->getRotation();
         glm::vec3 tempPos = snowman->getPos();

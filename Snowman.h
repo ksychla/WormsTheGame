@@ -14,7 +14,7 @@ class Snowman {
 public:
     Snowman(glm::vec3 position, Camera* cam);
     ~Snowman();
-    void move(GLFWwindow* window, double timePassed);
+    void move(GLFWwindow* window, double timePassed, bool);
     glm::vec3 getPos() { return pos; }
     float getRotation() { return rotation; }
     void changeCamera(Camera* cam) { camera = cam; }

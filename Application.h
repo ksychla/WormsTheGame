@@ -37,7 +37,7 @@ private:
     void changeCamera(GLFWwindow *window, Snowman*);
 
     int time;
-    bool whichCamera = 0;
+    bool whichCamera = true;
     Camera camera;
     ThirdPersonCamera thirdPersonCamera;
     FirstPersonCamera firstPersonCamera;

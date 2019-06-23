@@ -9,7 +9,6 @@
 
 class ThirdPersonCamera : public Camera{
     void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate);
-//    void moveWithPlayer(glm::vec3 position, float rotate);
 };
 
 
