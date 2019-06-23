@@ -26,5 +26,5 @@ void OnKeyRotationCamera::move(GLFWwindow *window, float timePassed) {
               rotate = glm::rotate(rotate, rotate_left * timePassed, up );
               rotate = glm::rotate(rotate, rotate_up * timePassed, left );
 
-    applyRotation(rotate);
+//    applyRotation(rotate);
 }
