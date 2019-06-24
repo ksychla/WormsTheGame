@@ -29,8 +29,7 @@ void Pocisk::strzal(glm::vec3 posStart, glm::vec2 angStart) {
     wormAng = angStart;
     wormAng.y = 0.5f;
     //printf("%f %f %f\n", poprzednia.x, poprzednia.y, poprzednia.z);
-
-    sila=20.f; //sile tez by mozna bylo przekazać, robić ją jak dlugo trzyma sie myszke
+//    sila=20.f; //sile tez by mozna bylo przekazać, robić ją jak dlugo trzyma sie myszke
 
     vZ = cos(wormAng.x) * cos(wormAng.y) * sila; //* dlugosc sily
     vX = sin(wormAng.x) * cos(wormAng.y) * sila; //
@@ -65,30 +64,28 @@ glm::vec3 Pocisk::pozycjaPocisku(float czas) {
 
 
 
-void Pocisk::mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
-    double time1;
-    double time2;
-    double timePassed;
+void Pocisk::enter_press() {
+
 //    auto myApplication = (Application*)glfwGetWindowUserPointer(window);
-    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
-        time1 = glfwGetTime();
-        flagaPocisku = 1;
-        //przekazac ile czasu uplynelo, podobnie jak rotacja na klawisz
+//    if (glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_PRESS){
+    timePress = glfwGetTime();
+    flagaPocisku = 1;
+    //przekazac ile czasu uplynelo, podobnie jak rotacja na klawisz
 
-    }
-    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
-
-        time2 = glfwGetTime();
-        timePassed = time2 - time1;
-
-        sila = sila + stalyPrzyrostSily * timePassed;   //TODO
-        if (sila == 2 * maxSila) sila = 0.0;
-        else if (sila > maxSila) sila = 2 * maxSila - sila;
-        //ustawić flagę i zrobić dwie procedury rysujące (rozgałęzienie) w przypadku jeżeli pocisk będzie
-        //przekazać wartości do funkcji pocisku skąd zaczyna
-        flagaPocisku = 2;
-    }
+//    }
 }
+void Pocisk::enter_release() {
+    timeRelease = glfwGetTime();
+    timePassedEnter = timeRelease - timePress;
+
+    sila = stalyPrzyrostSily * (float)timePassedEnter;   //TODO
+    //if (sila == 2 * maxSila) sila = 0.0;
+    if (sila > maxSila) sila = maxSila;
+    //przekazać wartości do funkcji pocisku skąd zaczyna
+//    flagaPocisku = 2;
+}
+
+
 
 //flaga pocisku:
 //0 - brak

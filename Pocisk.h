@@ -23,7 +23,8 @@ public:
     ~Pocisk();
     void strzal(glm::vec3 posStart, glm::vec2 angStart);
     glm::vec3 pozycjaPocisku (float czas);
-    void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+    void enter_press();
+    void enter_release();
     int getFlaga() { return flagaPocisku; }
     void setFlaga(int f) { flagaPocisku = f; }
 private:
@@ -33,9 +34,12 @@ private:
     float vX;
     float vY;
     float vZ;
+    double timePress;
+    double timeRelease;
+    double timePassedEnter;
     int flagaPocisku;
-    const float stalyPrzyrostSily = 1;
-    const float maxSila = 10;
+    const float stalyPrzyrostSily = 10;
+    const float maxSila = 20.f;
     float grawitacja = 9.81;
     glm::vec3 poprzednia;
     generateHeight* heightMap;

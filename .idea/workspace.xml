@@ -15,59 +15,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.h" beforeDir="false" afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Camera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/Camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstPersonCamera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonCamera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstPersonCamera.h" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonCamera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnKeyRotationCamera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OnKeyRotationCamera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnKeyRotationCamera.h" beforeDir="false" afterPath="$PROJECT_DIR$/OnKeyRotationCamera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/Parser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pocisk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Pocisk.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pocisk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pocisk.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/fragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/fragment.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/fragmentGui.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/fragmentGui.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/fragmentSnowman.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/fragmentSnowman.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/vertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/vertexGui.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/vertexGui.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/SimpleColour/vertexSnowman.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/Shaders/SimpleColour/vertexSnowman.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Snowman.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Snowman.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Snowman.h" beforeDir="false" afterPath="$PROJECT_DIR$/Snowman.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Terrain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terrain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Terrain.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Texture.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/Texture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPersonCamera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPersonCamera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPersonCamera.h" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPersonCamera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Camera.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Parser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Parser.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Terrain.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Texture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Texture.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/ThirdPersonCamera.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/generateHeight.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generateHeight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generateHeight.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pocisk.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+            <state relative-caret-position="167">
+              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -100,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pocisk.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="167">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="14" />
               <folding>
                 <element signature="e#229#252#0" expanded="true" />
               </folding>
@@ -112,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="385" column="26" selection-start-line="385" selection-start-column="26" selection-end-line="385" selection-end-column="26" />
+            <state relative-caret-position="250">
+              <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
               <folding>
                 <element signature="e#53#77#0" expanded="true" />
               </folding>
@@ -124,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="56" selection-start-line="56" selection-end-line="59" selection-end-column="14" />
+            <state relative-caret-position="276">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#122#142#0" expanded="true" />
                 <element signature="e#319#337#0" expanded="true" />
@@ -137,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Snowman.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="-263">
+              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -146,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Snowman.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="260">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="e#114#153#0" expanded="true" />
               </folding>
@@ -184,6 +141,7 @@
       <find>srand</find>
       <find>tim</find>
       <find>getFlaga</find>
+      <find>flaga</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,12 +193,12 @@
         <option value="$PROJECT_DIR$/OnKeyRotationCamera.h" />
         <option value="$PROJECT_DIR$/OnKeyRotationCamera.cpp" />
         <option value="$PROJECT_DIR$/ThirdPersonCamera.cpp" />
-        <option value="$PROJECT_DIR$/Pocisk.h" />
-        <option value="$PROJECT_DIR$/Snowman.h" />
-        <option value="$PROJECT_DIR$/Snowman.cpp" />
-        <option value="$PROJECT_DIR$/Pocisk.cpp" />
         <option value="$PROJECT_DIR$/generateHeight.cpp" />
         <option value="$PROJECT_DIR$/Application.h" />
+        <option value="$PROJECT_DIR$/Snowman.h" />
+        <option value="$PROJECT_DIR$/Pocisk.h" />
+        <option value="$PROJECT_DIR$/Pocisk.cpp" />
+        <option value="$PROJECT_DIR$/Snowman.cpp" />
         <option value="$PROJECT_DIR$/Application.cpp" />
       </list>
     </option>
@@ -337,7 +295,7 @@
       <workItem from="1559212480462" duration="5997000" />
       <workItem from="1559568849797" duration="3132000" />
       <workItem from="1559822854011" duration="23880000" />
-      <workItem from="1561119456745" duration="81049000" />
+      <workItem from="1561119456745" duration="84034000" />
     </task>
     <task id="LOCAL-00001" summary="Added terrain">
       <created>1559843319187</created>
@@ -364,7 +322,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132716000" />
+    <option name="totallyTimeSpent" value="135701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -720,26 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snowman.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding>
-            <element signature="e#114#153#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pocisk.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#229#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Terrain.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -757,10 +695,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Snowman.cpp">
+    <entry file="file://$PROJECT_DIR$/Snowman.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        <state relative-caret-position="260">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#114#153#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -771,17 +712,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pocisk.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#229#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pocisk.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        <state relative-caret-position="167">
+          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="56" selection-start-line="56" selection-end-line="59" selection-end-column="14" />
+        <state relative-caret-position="276">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#122#142#0" expanded="true" />
             <element signature="e#319#337#0" expanded="true" />
@@ -789,10 +740,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Snowman.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-263">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="385" column="26" selection-start-line="385" selection-start-column="26" selection-end-line="385" selection-end-column="26" />
+        <state relative-caret-position="250">
+          <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
           <folding>
             <element signature="e#53#77#0" expanded="true" />
           </folding>

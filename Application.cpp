@@ -162,6 +162,7 @@ void Application::mainLoop() {
     setRenderBehaviour();
     Snowman* snowman = new Snowman(heightMap, currentCamera, glm::vec2(10,20));
     Snowman* snowman2 = new Snowman(heightMap, nullptr, glm::vec2(70,60));
+    currentSnowman = snowman;
 
     double time1 = glfwGetTime();
     double time2;
@@ -221,10 +222,10 @@ void Application::mainLoop() {
         glDrawElements(GL_TRIANGLES, w.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
 
-        snowman->move(window, timePassed, whichCamera, pocisk);
+        currentSnowman->move(window, timePassed, whichCamera, pocisk);
 
-        float tempRot = snowman->getRotation();
-        glm::vec3 tempPos = snowman->getPos();
+        float tempRot = currentSnowman->getRotation();
+        glm::vec3 tempPos = currentSnowman->getPos();
 
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(1));
@@ -300,8 +301,22 @@ void Application::mainLoop() {
             glDrawElements(GL_TRIANGLES, sphere.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
             pocisk.setFlaga(pocisk.getFlaga()+1);
-            if (pocisk.getFlaga()==150)
+            if (pocisk.getFlaga()==150){
                 pocisk.setFlaga(0);
+                turn = !turn;
+                if(turn) {
+                    snowman->changeCamera(nullptr);
+                    snowman2->changeCamera(currentCamera);
+                    currentSnowman = snowman2;
+                }else{
+                    snowman->changeCamera(currentCamera);
+                    snowman2->changeCamera(nullptr);
+                    currentSnowman = snowman;
+                }
+
+            }
+
+
 
         }
 
@@ -377,10 +392,10 @@ void Application::setRenderBehaviour() {
 }
 
 //TODO kat wystrzalu //z pierwszej kamery do pocisku
-//TODO dopisanie akcji nacisku myszki w strzelaniu
+//TODO dopisanie akcji nacisku myszki w strzelaniu 👌
 //TODO (NIE) pasek sily
 //TODO tracenie zdrowia robaka
-//TODO rysuj balwana jesli healtsdfjshdk > 0
+//TODO rysuj balwana jesli healtsdfjshdk > 0 👌
 //TODO naprawić kamere
 //TODO tekstura
-//TODO przelaczanie kamery
+//TODO przelaczanie kamery 👌

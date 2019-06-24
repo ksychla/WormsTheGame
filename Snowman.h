@@ -28,7 +28,7 @@ private:
     Camera* camera;
 
 //    Pocisk* pocisk;
-
+    bool flagaEnter = false;
     glm::vec3 pos;
     glm::vec3 front = glm::vec3(0,0,-1);
     glm::vec3 up = glm::vec3(0,1,0);

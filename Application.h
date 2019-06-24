@@ -47,6 +47,7 @@ private:
     ThirdPersonCamera thirdPersonCamera;
     FirstPersonCamera firstPersonCamera;
     Camera* currentCamera;
+    Snowman* currentSnowman;
 
     ShaderProgram terrainShader;
     ShaderProgram snowmanShader;
