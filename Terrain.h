@@ -34,6 +34,7 @@ public:
 
     void setZ(float z);
 
+    generateHeight* getHeight() { return height; }
 
 
 private:
@@ -42,7 +43,7 @@ private:
     int x;
     int z;
     int maxY;
-    generateHeight* height = new generateHeight(20.0);
+    generateHeight* height;
 //    float **y;
     float y[10][10]={
             {0,0,0,1,1,1,0,0,0,0},

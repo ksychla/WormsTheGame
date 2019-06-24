@@ -5,7 +5,7 @@
 #include "FirstPersonCamera.h"
 
 
-void FirstPersonCamera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate) {
+void FirstPersonCamera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate, glm::mat4 g) {
     glm::vec3 dir = glm::vec3(0);
     float rotate_up = 0;
     float rotate_left = 0;

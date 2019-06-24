@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/krzysztof/Documents/ProjektGrafika/Application.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Camera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Camera.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o"
+  "/Users/krzysztof/Documents/ProjektGrafika/Game.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Game.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/MeshFactory.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/MeshFactory.cpp.o"
   "/Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.cpp" "/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/OnKeyRotationCamera.cpp.o"

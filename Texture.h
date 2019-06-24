@@ -10,6 +10,7 @@
 #include <GLFW/glfw3.h>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "lodepng.h"
 
 class Texture {

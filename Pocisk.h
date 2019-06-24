@@ -5,18 +5,27 @@
 #ifndef OPENGLSETUP_POCISK_H
 #define OPENGLSETUP_POCISK_H
 
+
+
+//#include "MeshFactory.h"
+//#include "Mesh.h"
+//#include "Parser.h"
 #include <glm/glm.hpp>
-#include <GL/glew.h>
+//#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <cmath>
+#include <stdio.h>
+#include "generateHeight.h"
 
 class Pocisk {
 public:
-    Pocisk();
+    Pocisk(generateHeight*);
     ~Pocisk();
-    void strzal(glm::vec3 posStart);
-    glm::vec4 pozycjaPocisku (glm::vec4 poprzednia, float czas);
+    void strzal(glm::vec3 posStart, glm::vec2 angStart);
+    glm::vec3 pozycjaPocisku (float czas);
     void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+    int getFlaga() { return flagaPocisku; }
+    void setFlaga(int f) { flagaPocisku = f; }
 private:
     glm::vec3 wormPos;
     glm::vec2 wormAng;
@@ -25,9 +34,11 @@ private:
     float vY;
     float vZ;
     int flagaPocisku;
-    const float stalyPrzyrostSily;
-    const float maxSila;
+    const float stalyPrzyrostSily = 1;
+    const float maxSila = 10;
     float grawitacja = 9.81;
+    glm::vec3 poprzednia;
+    generateHeight* heightMap;
 };
 
 

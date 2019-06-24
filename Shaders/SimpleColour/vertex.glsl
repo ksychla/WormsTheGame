@@ -39,14 +39,12 @@ void main(void){
 //    l=normalize(V*(M*lp-M*vec4(pos, 1.0))); //Wektor "do œwiat³a" w przestrzeni oka
 //    n=normalize(V*M*vec4(norm, 0.0)); //Wektor normalny w przestrzeni oka
 //    v=normalize(vec4(0,0,0,1)-V*M*vec4(pos, 1.0)); //Wektor "do obserwatora" w przestrzeni oka
+//    iColor = col;
 
     vec3 kd=col;
     float nl = light();
     iColor=kd.rgb*nl/2 + kd.rgb/2 ;
 
-//    vec3 lighting = lighting();
-//    iColor = col * lighting;
 
-//    iColor = col;
     gl_Position = MVP * vec4(pos, 1.0);
 }

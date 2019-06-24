@@ -4,7 +4,11 @@
 
 #include "Texture.h"
 
-Texture::Texture(std::string path) : commonPath(path) {}
+Texture::Texture(std::string path) : commonPath(path) {
+    std::fstream file(commonPath);
+    if(!file.good())
+        printf("Can't open file\n");
+}
 
 GLuint Texture::readTexture() {
     glActiveTexture(GL_TEXTURE0);

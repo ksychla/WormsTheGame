@@ -5,11 +5,12 @@
 #include "Terrain.h"
 
 Terrain::Terrain(int gridX, int gridZ, int gridY) {
-    size = 50;
+    size = 100;
     vertexCount = 128;
     x = gridX;
     z = gridZ;
     maxY = gridY;
+    height = new generateHeight(20.0);
 
 
 }

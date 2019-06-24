@@ -5,10 +5,12 @@ CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Application.cpp
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Application.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Camera.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../FirstPersonCamera.h
+CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Game.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Mesh.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../MeshFactory.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../OnKeyRotationCamera.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Parser.h
+CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Pocisk.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../ShaderProgram.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Snowman.h
 CMakeFiles/OpenGlSetup.dir/Application.cpp.o: ../Terrain.h
@@ -559,6 +561,9 @@ CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: /usr/local/include/glm/vec2.
 CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: /usr/local/include/glm/vec3.hpp
 CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: /usr/local/include/glm/vec4.hpp
 CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o: /usr/local/include/glm/vector_relational.hpp
+
+CMakeFiles/OpenGlSetup.dir/Game.cpp.o: ../Game.cpp
+CMakeFiles/OpenGlSetup.dir/Game.cpp.o: ../Game.h
 
 CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o: ../Mesh.cpp
 CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o: ../Mesh.h
@@ -1260,7 +1265,7 @@ CMakeFiles/OpenGlSetup.dir/Parser.cpp.o: /usr/local/include/glm/vector_relationa
 
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: ../Pocisk.cpp
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: ../Pocisk.h
-CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: /usr/local/include/GL/glew.h
+CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: ../generateHeight.h
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: /usr/local/include/GLFW/glfw3.h
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: /usr/local/include/glm/./detail/setup.hpp
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o: /usr/local/include/glm/./detail/type_mat2x2.hpp
@@ -1423,8 +1428,10 @@ CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.o: ../ShaderProgram.h
 CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.o: /usr/local/include/GL/glew.h
 
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: ../Camera.h
+CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: ../Pocisk.h
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: ../Snowman.cpp
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: ../Snowman.h
+CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: ../generateHeight.h
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: /usr/local/include/GLFW/glfw3.h
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: /usr/local/include/glm/./detail/setup.hpp
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o: /usr/local/include/glm/./detail/type_mat2x2.hpp
@@ -2102,9 +2109,11 @@ CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../Application.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../Camera.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../FirstPersonCamera.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../OnKeyRotationCamera.h
+CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../Pocisk.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../ShaderProgram.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../Snowman.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../ThirdPersonCamera.h
+CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../generateHeight.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: ../main.cpp
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: /usr/local/include/GL/glew.h
 CMakeFiles/OpenGlSetup.dir/main.cpp.o: /usr/local/include/GLFW/glfw3.h

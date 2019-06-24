@@ -7,7 +7,28 @@
 
 
 class Game {
+public:
+    Game();
+    ~Game();
 
+    int getHealthRed() const;
+
+    void setHealthRed(int healthRed);
+
+    int getHealthBlue() const;
+
+    void setHealthBlue(int healthBlue);
+
+    int getCzasRozgrywki() const;
+
+    void setCzasRozgrywki(int czasRozgrywki);
+
+private:
+    int healthRed;
+    int healthBlue;
+    int czasRozgrywki;   // ??
+    float wiatr;
+    float maxWiatr;
 };
 
 

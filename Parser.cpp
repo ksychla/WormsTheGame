@@ -19,6 +19,7 @@ bool Parser::loadOBJ(const char *path, std::vector<glm::vec3> &out_vertices, std
         printf("Impossible to open the file !\n");
         return false;
     }
+    flaga = false;
     while( 1 ) {
 
         char lineHeader[128];
@@ -47,7 +48,7 @@ bool Parser::loadOBJ(const char *path, std::vector<glm::vec3> &out_vertices, std
                                  &vertexIndex[1], &uvIndex[1], &normalIndex[1], &vertexIndex[2], &uvIndex[2],
                                  &normalIndex[2]);
             if (matches != 9) {
-                printf("File can't be read by our simple parser : ( Try exporting with other options\n");
+                printf("Cannot read file\n");
                 return false;
             }
             vertexIndices.push_back(vertexIndex[0]);
@@ -66,11 +67,12 @@ bool Parser::loadOBJ(const char *path, std::vector<glm::vec3> &out_vertices, std
         glm::vec3 vertex = temp_vertices[ vertexIndex-1 ];
         out_vertices.push_back(vertex);
     }
-    for( unsigned int i=0; i<uvIndices.size(); i++ ){
-        unsigned int vertexIndex = uvIndices[i];
-        glm::vec2 uvs = temp_uvs[ vertexIndex-1 ];
-        out_uvs.push_back(uvs);
-    }
+    if(!flaga)
+        for( unsigned int i=0; i<uvIndices.size(); i++ ){
+            unsigned int vertexIndex = uvIndices[i];
+            glm::vec2 uvs = temp_uvs[ vertexIndex-1 ];
+            out_uvs.push_back(uvs);
+        }
     for( unsigned int i=0; i<normalIndices.size(); i++ ){
         unsigned int vertexIndex = normalIndices[i];
         glm::vec3 normal = temp_normals[ vertexIndex-1 ];
@@ -78,11 +80,11 @@ bool Parser::loadOBJ(const char *path, std::vector<glm::vec3> &out_vertices, std
     }
 }
 
-Mesh Parser::getOBJ(const char * path){
+Mesh Parser::getOBJ(const char * path, glm::vec3 col){
     MeshFactory obj;
     std::vector< glm::vec3 > vertices;
     std::vector< glm::vec2 > uvs;
-    std::vector< glm::vec3 > normals; // Won't be used at the moment.
+    std::vector< glm::vec3 > normals;
     bool res = loadOBJ(path, vertices, uvs, normals);
 
     for(auto i : vertices){
@@ -99,7 +101,7 @@ Mesh Parser::getOBJ(const char * path){
     int j = 0;
     for(auto i : vertices){
         obj = obj.addInd(j++)
-                .addCol(glm::vec3(1.f,1.f,1.f));
+                .addCol(col);
     }
 
     return obj.create();

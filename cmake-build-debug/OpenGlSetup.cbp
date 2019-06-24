@@ -104,6 +104,12 @@
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Game.cpp">
+			<Option target="OpenGlSetup"/>
+		</Unit>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Game.h">
+			<Option target="OpenGlSetup"/>
+		</Unit>
 		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>

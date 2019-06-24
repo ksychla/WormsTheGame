@@ -12,6 +12,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 #include <unistd.h>
+//#include <ctime>
+#include <cstdlib>
+#include <cstdio>
+
 
 #include "ShaderProgram.h"
 #include "Camera.h"
@@ -35,15 +39,26 @@ public:
 private:
     void setRenderBehaviour();
     void changeCamera(GLFWwindow *window, Snowman*);
+    glm::vec3 losujWiatr();
 
-    int time;
+    int timeCamera;
     bool whichCamera = true;
     Camera camera;
     ThirdPersonCamera thirdPersonCamera;
     FirstPersonCamera firstPersonCamera;
     Camera* currentCamera;
 
-    ShaderProgram simpleColor;
+    ShaderProgram terrainShader;
+    ShaderProgram snowmanShader;
+    ShaderProgram missailShader;
+    ShaderProgram waterShader;
+    ShaderProgram guiShader;
+
+    int healthRed;
+    int healthBlue;
+    glm::vec3 wiatr;
+    bool turn;
+
 
     GLFWwindow* window;
 };

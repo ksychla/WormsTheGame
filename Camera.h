@@ -13,7 +13,7 @@
 
 class Camera {
 public:
-    virtual void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate);
+    virtual void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate, glm::mat4);
     glm::mat4 getView();
 protected:
     void applyRotation(glm::mat4 rotation);

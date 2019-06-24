@@ -11,16 +11,16 @@ glm::mat4 Camera::getView() {
     return glm::lookAt(pos, pos + front, up);
 }
 
-void Camera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate) {
+void Camera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate, glm::mat4 g) {
     glm::vec3 dir = glm::vec3(0);
     float rotate_up = 0;
     float rotate_left = 0;
     float rotationSpeed = 2.f;
 
 
-    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front*2.5f ;
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front*1.f ;
     if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed ;
-    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front*2.5f ;
+    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front*1.f ;
     if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left += -rotationSpeed ;
     if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) rotate_up -= rotationSpeed;
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) rotate_up += rotationSpeed;

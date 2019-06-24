@@ -6,10 +6,12 @@ CMakeFiles/OpenGlSetup.dir/Application.cpp.o
  /Users/krzysztof/Documents/ProjektGrafika/Application.h
  /Users/krzysztof/Documents/ProjektGrafika/Camera.h
  /Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.h
+ /Users/krzysztof/Documents/ProjektGrafika/Game.h
  /Users/krzysztof/Documents/ProjektGrafika/Mesh.h
  /Users/krzysztof/Documents/ProjektGrafika/MeshFactory.h
  /Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.h
  /Users/krzysztof/Documents/ProjektGrafika/Parser.h
+ /Users/krzysztof/Documents/ProjektGrafika/Pocisk.h
  /Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.h
  /Users/krzysztof/Documents/ProjektGrafika/Snowman.h
  /Users/krzysztof/Documents/ProjektGrafika/Terrain.h
@@ -560,6 +562,9 @@ CMakeFiles/OpenGlSetup.dir/FirstPersonCamera.cpp.o
  /usr/local/include/glm/vec3.hpp
  /usr/local/include/glm/vec4.hpp
  /usr/local/include/glm/vector_relational.hpp
+CMakeFiles/OpenGlSetup.dir/Game.cpp.o
+ /Users/krzysztof/Documents/ProjektGrafika/Game.cpp
+ /Users/krzysztof/Documents/ProjektGrafika/Game.h
 CMakeFiles/OpenGlSetup.dir/Mesh.cpp.o
  /Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp
  /Users/krzysztof/Documents/ProjektGrafika/Mesh.h
@@ -1261,7 +1266,7 @@ CMakeFiles/OpenGlSetup.dir/Parser.cpp.o
 CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o
  /Users/krzysztof/Documents/ProjektGrafika/Pocisk.cpp
  /Users/krzysztof/Documents/ProjektGrafika/Pocisk.h
- /usr/local/include/GL/glew.h
+ /Users/krzysztof/Documents/ProjektGrafika/generateHeight.h
  /usr/local/include/GLFW/glfw3.h
  /usr/local/include/glm/./detail/setup.hpp
  /usr/local/include/glm/./detail/type_mat2x2.hpp
@@ -1424,8 +1429,10 @@ CMakeFiles/OpenGlSetup.dir/ShaderProgram.cpp.o
  /usr/local/include/GL/glew.h
 CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o
  /Users/krzysztof/Documents/ProjektGrafika/Camera.h
+ /Users/krzysztof/Documents/ProjektGrafika/Pocisk.h
  /Users/krzysztof/Documents/ProjektGrafika/Snowman.cpp
  /Users/krzysztof/Documents/ProjektGrafika/Snowman.h
+ /Users/krzysztof/Documents/ProjektGrafika/generateHeight.h
  /usr/local/include/GLFW/glfw3.h
  /usr/local/include/glm/./detail/setup.hpp
  /usr/local/include/glm/./detail/type_mat2x2.hpp
@@ -2103,9 +2110,11 @@ CMakeFiles/OpenGlSetup.dir/main.cpp.o
  /Users/krzysztof/Documents/ProjektGrafika/Camera.h
  /Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.h
  /Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.h
+ /Users/krzysztof/Documents/ProjektGrafika/Pocisk.h
  /Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.h
  /Users/krzysztof/Documents/ProjektGrafika/Snowman.h
  /Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.h
+ /Users/krzysztof/Documents/ProjektGrafika/generateHeight.h
  /Users/krzysztof/Documents/ProjektGrafika/main.cpp
  /usr/local/include/GL/glew.h
  /usr/local/include/GLFW/glfw3.h
