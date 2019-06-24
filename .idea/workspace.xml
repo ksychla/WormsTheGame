@@ -12,19 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d468e1-ce1f-4512-93cd-764ca0867307" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.h" beforeDir="false" afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pocisk.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Pocisk.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pocisk.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pocisk.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Snowman.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Snowman.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Snowman.h" beforeDir="false" afterPath="$PROJECT_DIR$/Snowman.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Application.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Pocisk.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/Snowman.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenGlSetup.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenGlSetup" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
+            <state relative-caret-position="270">
+              <caret line="313" column="37" lean-forward="true" selection-start-line="313" selection-start-column="37" selection-end-line="313" selection-end-column="37" />
               <folding>
                 <element signature="e#53#77#0" expanded="true" />
               </folding>
@@ -295,7 +283,7 @@
       <workItem from="1559212480462" duration="5997000" />
       <workItem from="1559568849797" duration="3132000" />
       <workItem from="1559822854011" duration="23880000" />
-      <workItem from="1561119456745" duration="84034000" />
+      <workItem from="1561119456745" duration="85738000" />
     </task>
     <task id="LOCAL-00001" summary="Added terrain">
       <created>1559843319187</created>
@@ -322,7 +310,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135701000" />
+    <option name="totallyTimeSpent" value="137405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -749,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
+        <state relative-caret-position="270">
+          <caret line="313" column="37" lean-forward="true" selection-start-line="313" selection-start-column="37" selection-end-line="313" selection-end-column="37" />
           <folding>
             <element signature="e#53#77#0" expanded="true" />
           </folding>

@@ -303,6 +303,16 @@ void Application::mainLoop() {
             pocisk.setFlaga(pocisk.getFlaga()+1);
             if (pocisk.getFlaga()==150){
                 pocisk.setFlaga(0);
+                float snowX = snowman->getPos().x, snowY = snowman->getPos().y, snowZ = snowman->getPos().z;
+                float snow2X = snowman->getPos().x, snow2Y = snowman->getPos().y, snow2Z = snowman->getPos().z;
+                float dmgX = tmpPozPocisku.x, dmgY = tmpPozPocisku.y, dmgZ = tmpPozPocisku.z;
+                float range = 5;
+                if( (snowX > dmgX - range/2 || snowX < dmgX + range/2) && (snowZ > dmgZ - range/2 || snowZ < dmgZ + range/2) ){
+                    healthBlue -= 100;
+                }
+                if( (snow2X > dmgX - range/2 || snow2X < dmgX + range/2) && (snow2Z > dmgZ - range/2 || snow2Z < dmgZ + range/2) ){
+                    healthRed -= 100;
+                }
                 turn = !turn;
                 if(turn) {
                     snowman->changeCamera(nullptr);
