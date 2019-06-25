@@ -231,7 +231,7 @@ void Application::mainLoop() {
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(1));
         M = glm::translate(M, glm::vec3(0.f,-20.f,0.f) );
-        MVP = P * currentCamera->getView() * M;
+        MVP = P * currentSnowman->getView() * M;
         glUniformMatrix4fv(terrainShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
         glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
@@ -252,7 +252,7 @@ void Application::mainLoop() {
         glDrawElements(GL_TRIANGLES, w.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
 
 
-        currentSnowman->move(window, timePassed, whichCamera, pocisk);
+        currentSnowman->move(window, timePassed, pocisk, whichCamera);
 
         float tempRot = currentSnowman->getRotation();
         glm::vec3 tempPos = currentSnowman->getPos();
@@ -264,32 +264,8 @@ void Application::mainLoop() {
 //        M = glm::translate(M, glm::vec3(0,0,0));
 //        M = glm::translate(M, tempPos);
 
-
-
-//        glm::vec3 posTemp = snowman->getPos();
-
-
-//        terrainShader.freeProgram();
-        snowmanShader.use();
-//        M = glm::translate(M, posTemp);
-        MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
-
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D,tex);
-        glUniform1i(snowmanShader.getU("textureMap"),0);
-
-
-        if(healthBlue > 0){
-            snowmanMesh.bind();
-            glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-        }
+        drawSnowman1(tex, snowmanMesh, P, MVP, snowman, bazooka);
+        drawSnowman1(tex, snowmanMesh, P, MVP, snowman2, bazooka);
 
 
         //printf("%d\n", pocisk.getFlaga());
@@ -300,7 +276,7 @@ void Application::mainLoop() {
             glm::mat4 M2 = glm::mat4(1.f);
             M2 = glm::translate(M2, pocisk.pozycjaPocisku(timePassed));
             M2 = glm::rotate(M2, -(float)3.141592/2, glm::vec3(1,0,0));
-            MVP = P * currentCamera->getView() * M2;
+            MVP = P * currentSnowman->getView() * M2;
             glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
             glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M2));
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
@@ -324,7 +300,7 @@ void Application::mainLoop() {
 
 
 
-            MVP = P * currentCamera->getView() * M3;
+            MVP = P * currentSnowman->getView() * M3;
             glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
             glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M3));
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
@@ -353,89 +329,12 @@ void Application::mainLoop() {
                 }
                 turn = !turn;
                 if(turn) {
-                    snowman->changeCamera(nullptr);
-                    snowman2->changeCamera(currentCamera);
                     currentSnowman = snowman2;
                 }else{
-                    snowman->changeCamera(currentCamera);
-                    snowman2->changeCamera(nullptr);
                     currentSnowman = snowman;
                 }
-
             }
-
-
-
         }
-
-        M = glm::translate(M, glm::vec3(2,6,0));
-        M = glm::rotate(M, 1.7f, glm::vec3(0,1,0) );
-//        M = glm::translate(M, glm::vec3(-10,7,0));
-        MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
-
-        if(healthBlue > 0) {
-            bazooka.bind();
-            glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-        }
-
-        M = glm::mat4(1.f);
-        M = glm::scale(M, glm::vec3(1));
-        M = glm::translate(M, snowman2->getPos());
-        M = glm::rotate(M, 0.f, glm::vec3(0,1,0) );
-
-        MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
-
-
-        if(healthRed > 0){
-            snowmanMesh.bind();
-            glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-        }
-
-        M = glm::translate(M, glm::vec3(2,6,0));
-        M = glm::rotate(M, 1.7f, glm::vec3(0,1,0) );
-//        M = glm::translate(M, glm::vec3(-10,7,0));
-        MVP = P * currentCamera->getView() * M;
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
-
-        if(healthRed > 0) {
-            bazooka.bind();
-            glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-        }
-
-
-//        MeshFactory stats;
-//        stats = stats.addPos(glm::vec3(0,4,30))
-//                    .addPos(glm::vec3(1,4,30))
-//                    .addPos(glm::vec3(0,5,30))
-//
-//                    .addCol(glm::vec3(1,0,0))
-//                    .addCol(glm::vec3(1,0,0))
-//                    .addCol(glm::vec3(1,0,0))
-//
-//                    .addInd(1,2,3);
-//        Mesh statsMesh = stats.create();
-//
-//        statsMesh.bind();
-//        glDrawElements(GL_TRIANGLES, statsMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-
-
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -446,6 +345,44 @@ void Application::mainLoop() {
     terrainShader.freeProgram();
     snowmanShader.freeProgram();
     guiShader.freeProgram();
+}
+
+void Application::drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P, glm::mat4 &MVP, Snowman *snowman,
+                               Mesh &bazooka)
+{
+    if(healthBlue > 0){
+        snowmanShader.use();
+        MVP = P * currentSnowman->getView() * snowman->getModel();
+        glm::mat4 M = snowman->getModel();
+        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, value_ptr(MVP));
+        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, value_ptr(M));
+        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, value_ptr(P));
+        glUniform4f(snowmanShader.getU("lp"), 0, 50, -100, 1);
+        glUniform4f(snowmanShader.getU("lp2"), 0, 50, 100, 1);
+
+        glUniform1i(snowmanShader.getU("textureMap"), 0);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D,tex);
+
+        snowmanMesh.bind();
+        glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+
+        M = glm::mat4(1);
+        M = glm::translate(M, glm::vec3(2,6,0));
+        M = glm::rotate(M, 1.7f, glm::vec3(0,1,0) );
+        M = snowman->getModel() * M;
+        MVP = P * currentSnowman->getView() * M;
+        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
+        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
+
+        bazooka.bind();
+        glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+    }
 }
 
 void Application::setRenderBehaviour() {

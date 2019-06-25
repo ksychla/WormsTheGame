@@ -23,6 +23,7 @@
 #include "FirstPersonCamera.h"
 #include "ThirdPersonCamera.h"
 #include "Snowman.h"
+#include "Mesh.h"
 
 class Application {
     friend void key_callback(GLFWwindow*, int, int, int, int);
@@ -64,6 +65,10 @@ private:
 
 
     GLFWwindow* window;
+
+    void
+    drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P, glm::mat4 &MVP, Snowman *snowman,
+                     Mesh &bazooka);
 };
 
 

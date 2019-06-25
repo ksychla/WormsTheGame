@@ -16,7 +16,9 @@ class Snowman {
 public:
     Snowman(generateHeight*, Camera* cam, glm::vec2);
     ~Snowman();
-    void move(GLFWwindow* window, double timePassed, bool, Pocisk&);
+    glm::mat4 getModel();
+    glm::mat4 getView();
+    void move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool flaga);
     glm::vec3 getPos() { return pos; }
     float getRotation() { return rotation; }
     void changeCamera(Camera* cam) { camera = cam; }
@@ -28,6 +30,7 @@ private:
     Camera* camera;
 
 //    Pocisk* pocisk;
+    bool isThirdPerson = true;
     bool flagaEnter = false;
     glm::vec3 pos;
     glm::vec3 front = glm::vec3(0,0,-1);

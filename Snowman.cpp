@@ -14,13 +14,15 @@ Snowman::Snowman(generateHeight* h, Camera* cam, glm::vec2 position) {
     height = h;
 }
 
-void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& pocisk){
+void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool flaga)
+{
+    isThirdPerson = flaga;
     glm::vec3 dir = glm::vec3(0);
     float rotate_up = 0;
     float rotate_left = 0;
-    float rotationSpeed = 100.f;
+    float rotationSpeed = 1.f * (float)timePassed;
     glm::mat4 rotate;
-    if(flaga){
+    if(isThirdPerson){
         if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) dir += front*5.f ;
         if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed ;
         if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) dir += -front*5.f ;
@@ -30,9 +32,9 @@ void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& po
 
 
 
-        rotation += rotate_left/50000;
+        rotation += rotate_left;
         rotate = glm::mat4(1);
-        rotate = glm::rotate(rotate, rotate_left / 50000, up );
+        rotate = glm::rotate(rotate, rotate_left, up );
 //    rotate = glm::rotate(rotate, rotate_up * timePassed, left );
         applyRotation(rotate);
         pos+= dir * (float)timePassed;
@@ -41,16 +43,16 @@ void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& po
     }else{
         rotate_up = 0.f;
         rotate_left = rotation;
-        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) rotate_up += -2 ;
-        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += 2 ;
-        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) rotate_up += 2 ;
-        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left += -2 ;
+        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) rotate_up += -rotationSpeed;
+        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed;
+        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) rotate_up += rotationSpeed;
+        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left += -rotationSpeed;
 //        pocisk = new Pocisk();
         if(glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_PRESS  && !flagaEnter){
             pocisk.enter_press();
             flagaEnter = true;
         }
-//        printf("%d", flaga);
+//        printf("%d", isThirdPerson);
         if(glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_RELEASE && flagaEnter){
             pocisk.enter_release();
             printf("halollll\n");
@@ -63,9 +65,6 @@ void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& po
         //printf("%f %f %f\n", pos.x, pos.y, pos.z);
 //        delete pocisk;
     }
-
-
-    camera->move(window, timePassed, pos, rotate_left, rotate);
 }
 
 void Snowman::applyRotation(glm::mat4 rotation) {
@@ -73,4 +72,26 @@ void Snowman::applyRotation(glm::mat4 rotation) {
     front = toVec3(rotation * glm::vec4(front,1));
 //    up    = toVec3(rotation * glm::vec4(up   ,1));
 //    left  = toVec3(rotation * glm::vec4(left ,1));
+}
+
+glm::mat4 Snowman::getView()
+{
+    if(isThirdPerson){
+        return glm::lookAt( pos - 18.f * front + 10.f * up,
+                            pos + 18.f * front,
+                            up);
+    } else {
+        return glm::lookAt( pos + 5.f * front + 10.f * up,
+                            pos + 18.f * front + 10.f * up,
+                            up);
+
+    }
+}
+
+glm::mat4 Snowman::getModel()
+{
+    glm::mat4 M = glm::mat4(1);
+    M = glm::translate(M, pos);
+    M = glm::rotate(M, rotation, up);
+    return M;
 }

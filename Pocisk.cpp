@@ -87,7 +87,7 @@ void Pocisk::enter_release() {
 
 
 
-//flaga pocisku:
+//isThirdPerson pocisku:
 //0 - brak
 //1 - ustawianie sily strzalu
 //2 - wystrzel - strzal
