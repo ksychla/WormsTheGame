@@ -31,8 +31,8 @@ void Pocisk::strzal(glm::vec3 posStart, glm::vec2 angStart) {
     //printf("%f %f %f\n", poprzednia.x, poprzednia.y, poprzednia.z);
 //    sila=20.f; //sile tez by mozna bylo przekazać, robić ją jak dlugo trzyma sie myszke
 
-    vZ = cos(wormAng.x) * cos(wormAng.y) * sila; //* dlugosc sily
-    vX = sin(wormAng.x) * cos(wormAng.y) * sila; //
+    vZ = cos(wormAng.x) * cos(wormAng.y) * sila - wiatr.x; //* dlugosc sily
+    vX = sin(wormAng.x) * cos(wormAng.y) * sila - wiatr.z; //
     vY = sin(wormAng.y) * sila; //
 
     flagaPocisku = 2;

@@ -27,6 +27,7 @@ public:
     void enter_release();
     int getFlaga() { return flagaPocisku; }
     void setFlaga(int f) { flagaPocisku = f; }
+    void setWiatr(glm::vec3 w) { wiatr = w; }
 private:
     glm::vec3 wormPos;
     glm::vec2 wormAng;
@@ -37,6 +38,7 @@ private:
     double timePress;
     double timeRelease;
     double timePassedEnter;
+    glm::vec3 wiatr;
     int flagaPocisku;
     const float stalyPrzyrostSily = 10;
     const float maxSila = 20.f;

@@ -208,6 +208,7 @@ void Application::mainLoop() {
         if ( currentTime - fpsNow >= 1.0 ){
             printf("%d FPS\n", nbFrames);
             if (pocisk.getFlaga() != 1) wiatr = losujWiatr();
+            pocisk.setWiatr(wiatr);
             nbFrames = 0;
             fpsNow += 1.0;
             printf("Wiatr w kierunku\n x:%f\ty:%f\t%f\n", wiatr.x, wiatr.y, wiatr.z );
@@ -280,9 +281,8 @@ void Application::mainLoop() {
         glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
 
-
-        glBindTexture(GL_TEXTURE_2D,tex);
         glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D,tex);
         glUniform1i(snowmanShader.getU("textureMap"),0);
 
 
