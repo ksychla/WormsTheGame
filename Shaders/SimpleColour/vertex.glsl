@@ -10,6 +10,7 @@ uniform mat4 M;
 uniform mat4 V;
 uniform mat4 P;
 uniform vec4 lp;    // współrzedne źródła światła
+uniform vec4 lp2;
 
 out vec4 l;
 out vec4 n;
@@ -25,11 +26,11 @@ vec3 lighting(){
     return ld*0.5 + brightness * ld * 0.5;
 }
 
-float light(){
+float light(vec4 lc){
     vec3 kd=col; //Kolor obiektu
     vec3 ld=vec3(1,1,1); //Kolor œwiat³a
 
-    vec4 l=normalize(V*(lp-M*vec4(pos,1.0))); //Wektor "do œwiat³a" w przestrzeni oka
+    vec4 l=normalize(V*(lc-M*vec4(pos,1.0))); //Wektor "do œwiat³a" w przestrzeni oka
     vec4 n=normalize(V*M*vec4(norm, 0.0)); //Wektor normalny w przestrzeni oka
 
     return clamp(dot(n,l),0,1);
@@ -42,8 +43,9 @@ void main(void){
 //    iColor = col;
 
     vec3 kd=col;
-    float nl = light();
-    iColor=kd.rgb*nl/2 + kd.rgb/2 ;
+    float nl = light(lp);
+    float nl2 = light(lp2);
+    iColor=kd.rgb*nl/2 + kd.rgb*nl2/2;// + kd.rgb/5 ;
 
 
     gl_Position = MVP * vec4(pos, 1.0);

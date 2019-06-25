@@ -8,7 +8,9 @@
 #include "Camera.h"
 
 class ThirdPersonCamera : public Camera{
+public:
     void move(GLFWwindow* window, float timePassed, glm::vec3 position, float rotate, glm::mat4);
+    glm::mat4 getView();
 };
 
 

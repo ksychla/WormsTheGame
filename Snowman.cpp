@@ -39,7 +39,12 @@ void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& po
         pos = glm::vec3(pos.x, height->height(pos.x, pos.z)-17, pos.z);
         //printf("%f %f %f\n", pos.x, pos.y, pos.z);
     }else{
-
+        rotate_up = 0.f;
+        rotate_left = rotation;
+        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) rotate_up += -2 ;
+        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += 2 ;
+        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) rotate_up += 2 ;
+        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) rotate_left += -2 ;
 //        pocisk = new Pocisk();
         if(glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_PRESS  && !flagaEnter){
             pocisk.enter_press();
@@ -50,7 +55,7 @@ void Snowman::move(GLFWwindow* window, double timePassed, bool flaga, Pocisk& po
             pocisk.enter_release();
             printf("halollll\n");
             flagaEnter = false;
-            pocisk.strzal(pos, glm::vec2(-rotation, 0.0f));
+            pocisk.strzal(pos, glm::vec2(rotate_up, rotate_left));
         }
 
             //pocisk.strzal(pos, glm::vec2(-rotation, 0.0f)) ;

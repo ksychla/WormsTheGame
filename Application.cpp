@@ -13,6 +13,7 @@
 #include "Game.h"
 #include "generateHeight.h"
 #include "Pocisk.h"
+#include "lodepng.h"
 
 
 #include "ShaderProgram.h"
@@ -80,8 +81,7 @@ Application::Application(GLFWwindow *window) : window(window) {
     currentCamera = &thirdPersonCamera;
 }
 
-Application::~Application() {
-}
+Application::~Application() { }
 
 void Application::changeCamera(GLFWwindow *window, Snowman* snowman){
     auto myApplication = (Application*)glfwGetWindowUserPointer(window);
@@ -107,6 +107,29 @@ glm::vec3 Application::losujWiatr() {
     return tmp;
 }
 
+GLuint Application::readTexture(const char* filename) {
+    GLuint texture;
+    glActiveTexture(GL_TEXTURE0);
+
+    //Wczytanie do pamięci komputera
+    std::vector<unsigned char> image;   //Alokuj wektor do wczytania obrazka
+    unsigned width, height;   //Zmienne do których wczytamy wymiary obrazka
+    //Wczytaj obrazek
+    unsigned error = lodepng::decode(image, width, height, filename);
+
+    //Import do pamięci karty graficznej
+    glGenTextures(1,&texture); //Zainicjuj jeden uchwyt
+    glBindTexture(GL_TEXTURE_2D, texture); //Uaktywnij uchwyt
+    //Wczytaj obrazek do pamięci KG skojarzonej z uchwytem
+    glTexImage2D(GL_TEXTURE_2D, 0, 4, width, height, 0,
+                 GL_RGBA, GL_UNSIGNED_BYTE, (unsigned char*) image.data());
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    return texture;
+}
+
 void Application::mainLoop() {
 
     Terrain terrain(1,1,5);
@@ -117,14 +140,19 @@ void Application::mainLoop() {
     Water water(500);
     Mesh w = water.createWater();
 
-    Texture texture("../Textures/snow.jpg");
-    GLuint tex = texture.readTexture();
+//    Texture texture("../Textures/tiger.png");
+//    GLuint tex = texture.readTexture();
+//
+//    Texture texture2("../Textures/tiger.png");
+//    GLuint tex2 = texture2.readTexture();
+
+    GLuint tex = readTexture("../Textures/tiger.png");
 
 //    Wczytywanie bałwana
 
     Parser* parser = new Parser();
 
-    Mesh missel = parser->getOBJ("../Models/snowman.obj", glm::vec3(1,1,1));
+    Mesh snowmanMesh = parser->getOBJ("../Models/snowman.obj", glm::vec3(1,1,1));
 
     Parser* par = new Parser();
 
@@ -207,7 +235,8 @@ void Application::mainLoop() {
         glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(terrainShader.getU("lp"),0,-10,-100,1);
+        glUniform4f(terrainShader.getU("lp"),0,50,-100,1);
+        glUniform4f(terrainShader.getU("lp2"),0,50,100,1);
 
 
 
@@ -239,7 +268,7 @@ void Application::mainLoop() {
 //        glm::vec3 posTemp = snowman->getPos();
 
 
-
+//        terrainShader.freeProgram();
         snowmanShader.use();
 //        M = glm::translate(M, posTemp);
         MVP = P * currentCamera->getView() * M;
@@ -247,15 +276,19 @@ void Application::mainLoop() {
         glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,-10,-100,1);
+        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
-//        glUniform1i(snowmanShader.getU("textureMap"),0);
-//        glActiveTexture(GL_TEXTURE0);
-//        glBindTexture(GL_TEXTURE_2D,tex);
+
+
+        glBindTexture(GL_TEXTURE_2D,tex);
+        glActiveTexture(GL_TEXTURE0);
+        glUniform1i(snowmanShader.getU("textureMap"),0);
+
 
         if(healthBlue > 0){
-            missel.bind();
-            glDrawElements(GL_TRIANGLES, missel.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+            snowmanMesh.bind();
+            glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
         }
 
 
@@ -272,7 +305,8 @@ void Application::mainLoop() {
             glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M2));
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
             glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-            glUniform4f(snowmanShader.getU("lp"),0,-10,-100,1);
+            glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+            glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
 
 
@@ -295,7 +329,8 @@ void Application::mainLoop() {
             glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M3));
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
             glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-            glUniform4f(snowmanShader.getU("lp"),0,-10,-100,1);
+            glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+            glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
             sphere.bind();
             glDrawElements(GL_TRIANGLES, sphere.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
@@ -341,11 +376,13 @@ void Application::mainLoop() {
         glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,-10,-100,1);
+        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
-        bazooka.bind();
-        glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-
+        if(healthBlue > 0) {
+            bazooka.bind();
+            glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+        }
 
         M = glm::mat4(1.f);
         M = glm::scale(M, glm::vec3(1));
@@ -357,12 +394,29 @@ void Application::mainLoop() {
         glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
         glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,-10,-100,1);
+        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
 
 
         if(healthRed > 0){
-            missel.bind();
-            glDrawElements(GL_TRIANGLES, missel.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+            snowmanMesh.bind();
+            glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
+        }
+
+        M = glm::translate(M, glm::vec3(2,6,0));
+        M = glm::rotate(M, 1.7f, glm::vec3(0,1,0) );
+//        M = glm::translate(M, glm::vec3(-10,7,0));
+        MVP = P * currentCamera->getView() * M;
+        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
+        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
+        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
+
+        if(healthRed > 0) {
+            bazooka.bind();
+            glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
         }
 
 
@@ -404,7 +458,8 @@ void Application::setRenderBehaviour() {
     );
 }
 
-//TODO kat wystrzalu //z pierwszej kamery do pocisku
+//TODO kat wystrzalu //z pierwszej kamery do pocisku 👌(KINDA)
+//TODO drógie źródło światła 👌
 //TODO dopisanie akcji nacisku myszki w strzelaniu 👌
 //TODO (NIE) pasek sily
 //TODO tracenie zdrowia robaka 👌

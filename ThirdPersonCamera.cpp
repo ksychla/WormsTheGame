@@ -5,13 +5,18 @@
 #include "ThirdPersonCamera.h"
 
 void ThirdPersonCamera::move(GLFWwindow *window, float timePassed, glm::vec3 position, float rotate, glm::mat4 macierz) {
-
-//    rotate = glm::mat4(1);
-//    macierz = glm::rotate(macierz, rotate / 50000, up );
-//    rotate = glm::rotate(rotate, rotate_up * timePassed, left );
-    applyRotation(macierz);
     glm::vec3 constPos = glm::vec3(0,8,30);
+//    glm::mat4 rotatet = glm::mat4(1);
+    macierz = glm::rotate(macierz, rotate / 50000, up );
+//    rotatet = glm::translate(rotatet, position + constPos);
+//    rotatet = glm::rotate(rotatet, rotate /50000, up );
+
+
+
+    applyRotation(macierz);
     pos = position + constPos;
+
+
 
 //    glm::vec3 constPos = glm::vec3(0,8,30);
 //    pos = position + constPos;
@@ -23,3 +28,6 @@ void ThirdPersonCamera::move(GLFWwindow *window, float timePassed, glm::vec3 pos
 
 }
 
+glm::mat4 ThirdPersonCamera::getView() {
+    return glm::lookAt(pos, pos - glm::vec3(0,8,30), up);
+}

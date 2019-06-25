@@ -90,7 +90,7 @@ Mesh Parser::getOBJ(const char * path, glm::vec3 col){
     for(auto i : vertices){
         obj = obj.addPos(i);
     }
-    if(uvs.size() > 0)
+    if(!uvs.empty())
         for(auto i : uvs){
             obj = obj.addUv(i);
         }

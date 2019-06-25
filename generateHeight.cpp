@@ -11,7 +11,7 @@ generateHeight::generateHeight(float amplituda) : amplituda(amplituda) {
 
 float generateHeight::height(int x, int z) {
     float total = getInterpolatedNoise(x/8.f,z/8.f) * amplituda;
-//    total += getInterpolatedNoise(x/2.f,z/2.f) * amplituda / 3.f;
+    total += getInterpolatedNoise(x/4.f,z/4.f) * amplituda / 3.f;
     return total;
 }
 

@@ -49,6 +49,8 @@ private:
     Camera* currentCamera;
     Snowman* currentSnowman;
 
+    GLuint readTexture(const char* filename);
+
     ShaderProgram terrainShader;
     ShaderProgram snowmanShader;
     ShaderProgram missailShader;
