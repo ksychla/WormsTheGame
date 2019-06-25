@@ -13,27 +13,10 @@ Pocisk::~Pocisk(){
 
 }
 
-void Pocisk::strzal(glm::vec3 posStart, glm::vec2 angStart) {
-    poprzednia = posStart;
-    poprzednia.y += 11.f;
-
-//    Parser* parser = new Parser();
-//
-//    Mesh missel = parser->getOBJ("../Models/Missel.obj");
-
-
-
-    wormPos = posStart; //tu przypisać pozycje robaka, x, y, z //pierwsza pozycja pocisku
-    wormPos.y += 11.f;
-    //wormAng = glm::vec2(-3.14/2, 0.0f); //kąt względem x?, kąt góra-dół (oś z)
-    wormAng = angStart;
-    wormAng.y = 0.5f;
-    //printf("%f %f %f\n", poprzednia.x, poprzednia.y, poprzednia.z);
-//    sila=20.f; //sile tez by mozna bylo przekazać, robić ją jak dlugo trzyma sie myszke
-
-    vZ = cos(wormAng.x) * cos(wormAng.y) * sila - wiatr.x; //* dlugosc sily
-    vX = sin(wormAng.x) * cos(wormAng.y) * sila - wiatr.z; //
-    vY = sin(wormAng.y) * sila; //
+void Pocisk::strzal(glm::vec3 posStart, glm::vec3 velocity) {
+    vX = velocity.x * sila; //
+    vY = velocity.y * sila; //
+    vZ = velocity.z * sila; //* dlugosc sily
 
     flagaPocisku = 2;
 }

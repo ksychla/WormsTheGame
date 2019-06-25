@@ -34,6 +34,8 @@ private:
     bool flagaEnter = false;
     glm::vec3 pos;
     glm::vec3 front = glm::vec3(0,0,-1);
+    glm::vec3 frontFirstPerson = glm::vec3(0,0,-1);
+    glm::vec3 upFirstPerson    = glm::vec3(0,1,0);
     glm::vec3 up = glm::vec3(0,1,0);
     glm::vec3 left = glm::vec3(-1,0,0);
     float rotation = 0;

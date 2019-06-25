@@ -1,12 +1,12 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -G "CodeBlocks - Unix Makefiles" /Users/krzysztof/Documents/ProjektGrafika
-CMAKE_MODULE_PATH:/Users/krzysztof/Documents/ProjektGrafika/Modules/
--- GLM_INCLUDE_DIR = /usr/local/include
--- GLM_INCLUDE_DIR = /usr/local/include
-OPENGL-FOUND:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework
-GLM-FOUND:/usr/local/include
+/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dominik/Projekty/Grafika/WormsTheGame
+CMAKE_MODULE_PATH:/home/dominik/Projekty/Grafika/WormsTheGame/Modules/
+-- GLM_INCLUDE_DIR = /usr/include
+-- GLM_INCLUDE_DIR = /usr/include
+OPENGL-FOUND:/usr/include
+GLM-FOUND:/usr/include
 glfw3-FOUND:
-GLEW-FOUND:/usr/local/include
-ASSIMP-FOIUND:/usr/local/include
+GLEW-FOUND:/usr/include
+ASSIMP-FOIUND:/usr/lib/include
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug
+-- Build files have been written to: /home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug

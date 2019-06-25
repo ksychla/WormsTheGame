@@ -21,7 +21,7 @@ class Pocisk {
 public:
     Pocisk(generateHeight*);
     ~Pocisk();
-    void strzal(glm::vec3 posStart, glm::vec2 angStart);
+    void strzal(glm::vec3 posStart, glm::vec3 velocity);
     glm::vec3 pozycjaPocisku (float czas);
     void enter_press();
     void enter_release();

@@ -40,9 +40,11 @@ void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool f
         pos+= dir * (float)timePassed;
         pos = glm::vec3(pos.x, height->height(pos.x, pos.z)-17, pos.z);
         //printf("%f %f %f\n", pos.x, pos.y, pos.z);
+
+        frontFirstPerson = front;
+        upFirstPerson = up;
     }else{
         rotate_up = 0.f;
-        rotate_left = rotation;
         if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) rotate_up += -rotationSpeed;
         if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) rotate_left += rotationSpeed;
         if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) rotate_up += rotationSpeed;
@@ -53,11 +55,21 @@ void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool f
             flagaEnter = true;
         }
 //        printf("%d", isThirdPerson);
+
+        left = glm::cross(up, front);
+        rotate = glm::mat4(1);
+        rotate = glm::rotate(rotate, rotate_left, up );
+        applyRotation(rotate);
+        rotate = glm::rotate(rotate, rotate_up, left );
+        frontFirstPerson = toVec3(rotate * glm::vec4(frontFirstPerson, 1));
+        upFirstPerson    = toVec3(rotate * glm::vec4(upFirstPerson   , 1));
+
+        rotate_left += rotation;
         if(glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_RELEASE && flagaEnter){
             pocisk.enter_release();
             printf("halollll\n");
             flagaEnter = false;
-            pocisk.strzal(pos, glm::vec2(rotate_up, rotate_left));
+            pocisk.strzal(pos, glm::vec3(0,8,0));
         }
 
             //pocisk.strzal(pos, glm::vec2(-rotation, 0.0f)) ;
@@ -82,8 +94,8 @@ glm::mat4 Snowman::getView()
                             up);
     } else {
         return glm::lookAt( pos + 5.f * front + 10.f * up,
-                            pos + 18.f * front + 10.f * up,
-                            up);
+                            pos + 18.f * frontFirstPerson + 10.f * up,
+                            upFirstPerson);
 
     }
 }
