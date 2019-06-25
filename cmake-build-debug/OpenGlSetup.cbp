@@ -5,214 +5,214 @@
 		<Option title="OpenGlSetup"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\;CMake Files\Modules\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\;CMake Files\..\..\..\..\usr\local\lib\cmake\assimp-4.1\;CMake Files\Modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug"/>
+				<Option working_dir="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug"/>
+				<Option working_dir="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="OpenGlSetup">
-				<Option output="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/OpenGlSetup" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DGLFW_DLL"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGlSetup"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="OpenGlSetup/fast">
-				<Option output="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/OpenGlSetup" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DGLFW_DLL"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGlSetup/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug"/>
+				<Option working_dir="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dominik/Projekty/Grafika/WormsTheGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGlSetup">
+				<Option output="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/OpenGlSetup" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGlSetup"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGlSetup/fast">
+				<Option output="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/OpenGlSetup" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGlSetup/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/krzysztof/Documents/ProjektGrafika/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Application.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Application.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Application.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Application.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Camera.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Camera.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Camera.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Camera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/FirstPersonCamera.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/FirstPersonCamera.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/FirstPersonCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Game.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Game.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Game.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Game.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Mesh.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Mesh.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Mesh.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Mesh.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/MeshFactory.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/MeshFactory.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/MeshFactory.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/MeshFactory.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/OnKeyRotationCamera.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/OnKeyRotationCamera.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/OnKeyRotationCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Parser.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Parser.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Parser.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Parser.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Pocisk.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Pocisk.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Pocisk.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Pocisk.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/ShaderProgram.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/ShaderProgram.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ShaderProgram.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Snowman.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Snowman.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Snowman.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Snowman.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Terrain.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Terrain.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Terrain.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Terrain.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Texture.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Texture.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Texture.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Texture.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/ThirdPersonCamera.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/ThirdPersonCamera.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/ThirdPersonCamera.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Water.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Water.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Water.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Water.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/generateHeight.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/generateHeight.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/generateHeight.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/lodepng.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/lodepng.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/lodepng.h">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/lodepng.h">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/main.cpp">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/main.cpp">
 			<Option target="OpenGlSetup"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/CMakeLists.txt">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets-none.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/assimp-4.1/assimp-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\assimp-4.1\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/../../../../../usr/lib/x86_64-linux-gnu/cmake/assimp-4.1/assimp-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\assimp-4.1\"/>
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/../../../../usr/local/lib/cmake/assimp-4.1/assimp-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\assimp-4.1\"/>
 		</Unit>
-		<Unit filename="/home/dominik/Projekty/Grafika/WormsTheGame/Modules/FindGLM.cmake">
+		<Unit filename="/Users/krzysztof/Documents/ProjektGrafika/Modules/FindGLM.cmake">
 			<Option virtualFolder="CMake Files\Modules\"/>
 		</Unit>
 	</Project>

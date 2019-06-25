@@ -8,9 +8,11 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
+#include <cmath>
 #include "Camera.h"
 #include "Pocisk.h"
 #include "generateHeight.h"
+
 
 class Snowman {
 public:

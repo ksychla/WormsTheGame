@@ -68,7 +68,7 @@ private:
 
     void
     drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P, glm::mat4 &MVP, Snowman *snowman,
-                     Mesh &bazooka);
+                     Mesh &bazooka, int health);
 };
 
 

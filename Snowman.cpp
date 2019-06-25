@@ -67,9 +67,8 @@ void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool f
         rotate_left += rotation;
         if(glfwGetKey(window, GLFW_KEY_ENTER) == GLFW_RELEASE && flagaEnter){
             pocisk.enter_release();
-            printf("halollll\n");
             flagaEnter = false;
-            pocisk.strzal(pos, glm::vec3(0,8,0));
+            pocisk.strzal(pos, frontFirstPerson/sqrt(frontFirstPerson.x*frontFirstPerson.x + frontFirstPerson.y*frontFirstPerson.y + frontFirstPerson.z* frontFirstPerson.z));
         }
 
             //pocisk.strzal(pos, glm::vec2(-rotation, 0.0f)) ;

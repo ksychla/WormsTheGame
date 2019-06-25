@@ -264,8 +264,8 @@ void Application::mainLoop() {
 //        M = glm::translate(M, glm::vec3(0,0,0));
 //        M = glm::translate(M, tempPos);
 
-        drawSnowman1(tex, snowmanMesh, P, MVP, snowman, bazooka);
-        drawSnowman1(tex, snowmanMesh, P, MVP, snowman2, bazooka);
+        drawSnowman1(tex, snowmanMesh, P, MVP, snowman, bazooka, healthBlue);
+        drawSnowman1(tex, snowmanMesh, P, MVP, snowman2, bazooka, healthRed);
 
 
         //printf("%d\n", pocisk.getFlaga());
@@ -288,7 +288,7 @@ void Application::mainLoop() {
 
             pociskMesh.bind();
             glDrawElements(GL_TRIANGLES, pociskMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
-
+//            printf("halo");
             tmpPozPocisku = pocisk.pozycjaPocisku(timePassed);
         }
         else if(pocisk.getFlaga() >= 3)
@@ -348,9 +348,9 @@ void Application::mainLoop() {
 }
 
 void Application::drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P, glm::mat4 &MVP, Snowman *snowman,
-                               Mesh &bazooka)
+                               Mesh &bazooka, int health)
 {
-    if(healthBlue > 0){
+    if(health > 0){
         snowmanShader.use();
         MVP = P * currentSnowman->getView() * snowman->getModel();
         glm::mat4 M = snowman->getModel();
@@ -361,9 +361,9 @@ void Application::drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P
         glUniform4f(snowmanShader.getU("lp"), 0, 50, -100, 1);
         glUniform4f(snowmanShader.getU("lp2"), 0, 50, 100, 1);
 
-        glUniform1i(snowmanShader.getU("textureMap"), 0);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D,tex);
+//        glUniform1i(snowmanShader.getU("textureMap"), 0);
+//        glActiveTexture(GL_TEXTURE0);
+//        glBindTexture(GL_TEXTURE_2D,tex);
 
         snowmanMesh.bind();
         glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
