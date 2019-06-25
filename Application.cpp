@@ -303,15 +303,18 @@ void Application::mainLoop() {
             pocisk.setFlaga(pocisk.getFlaga()+1);
             if (pocisk.getFlaga()==150){
                 pocisk.setFlaga(0);
+
                 float snowX = snowman->getPos().x, snowY = snowman->getPos().y, snowZ = snowman->getPos().z;
-                float snow2X = snowman->getPos().x, snow2Y = snowman->getPos().y, snow2Z = snowman->getPos().z;
+                float snow2X = snowman2->getPos().x, snow2Y = snowman2->getPos().y, snow2Z = snowman2->getPos().z;
                 float dmgX = tmpPozPocisku.x, dmgY = tmpPozPocisku.y, dmgZ = tmpPozPocisku.z;
-                float range = 5;
-                if( (snowX > dmgX - range/2 || snowX < dmgX + range/2) && (snowZ > dmgZ - range/2 || snowZ < dmgZ + range/2) ){
-                    healthBlue -= 100;
+                float range = 15/2;
+                float snowR = (snowX - dmgX) * (snowX - dmgX) + (snowZ - dmgZ) * (snowZ - dmgZ);
+                if( snowR < range * range ) {
+                    healthBlue -= (int)((1 - snowR / (range * range)) * 100);
                 }
-                if( (snow2X > dmgX - range/2 || snow2X < dmgX + range/2) && (snow2Z > dmgZ - range/2 || snow2Z < dmgZ + range/2) ){
-                    healthRed -= 100;
+                float snowR2 = (snow2X - dmgX) * (snow2X - dmgX) + (snow2Z - dmgZ) * (snow2Z - dmgZ);
+                if( snowR2 < range * range ) {
+                    healthRed -= (int)((1 - snowR2 / (range * range)) * 100);
                 }
                 turn = !turn;
                 if(turn) {
@@ -404,7 +407,7 @@ void Application::setRenderBehaviour() {
 //TODO kat wystrzalu //z pierwszej kamery do pocisku
 //TODO dopisanie akcji nacisku myszki w strzelaniu 👌
 //TODO (NIE) pasek sily
-//TODO tracenie zdrowia robaka
+//TODO tracenie zdrowia robaka 👌
 //TODO rysuj balwana jesli healtsdfjshdk > 0 👌
 //TODO naprawić kamere
 //TODO tekstura
