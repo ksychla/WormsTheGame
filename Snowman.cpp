@@ -19,7 +19,7 @@ void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool f
     isThirdPerson = flaga;
     glm::vec3 dir = glm::vec3(0);
     float rotate_up = 0;
-    float rotate_left = 0;
+    rotate_left = 0;
     float rotationSpeed = 1.f * (float)timePassed;
     glm::mat4 rotate;
     if(isThirdPerson){
@@ -70,7 +70,10 @@ void Snowman::move(GLFWwindow *window, double timePassed, Pocisk &pocisk, bool f
             flagaEnter = false;
             pocisk.strzal(pos, frontFirstPerson/sqrt(frontFirstPerson.x*frontFirstPerson.x + frontFirstPerson.y*frontFirstPerson.y + frontFirstPerson.z* frontFirstPerson.z));
         }
+//        frontFirstPerson = glm::normalize(frontFirstPerson);
 
+        rotation = rotate_left;
+//        front = glm::vec3(frontFirstPerson.x, front.y, frontFirstPerson.z);
             //pocisk.strzal(pos, glm::vec2(-rotation, 0.0f)) ;
 //        printf("%f\n", rotation);
         //printf("%f %f %f\n", pos.x, pos.y, pos.z);

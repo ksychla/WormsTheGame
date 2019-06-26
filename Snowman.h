@@ -24,6 +24,7 @@ public:
     glm::vec3 getPos() { return pos; }
     float getRotation() { return rotation; }
     void changeCamera(Camera* cam) { camera = cam; }
+    float getRotateLeft() { return rotate_left; }
 private:
     int health = 100;
 
@@ -41,6 +42,7 @@ private:
     glm::vec3 up = glm::vec3(0,1,0);
     glm::vec3 left = glm::vec3(-1,0,0);
     float rotation = 0;
+    float rotate_left;
 
     void applyRotation(glm::mat4 rotation);
 };

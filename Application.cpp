@@ -271,7 +271,7 @@ void Application::mainLoop() {
         drawSnowman1(tex, snowmanMesh, P, MVP, snowman2, bazooka, healthRed);
 
 
-        snowmanShader.use();
+        terrainShader.use();
         //printf("%d\n", pocisk.getFlaga());
         glm::vec3 tmpPozPocisku;
         if(pocisk.getFlaga() == 2){
@@ -279,14 +279,15 @@ void Application::mainLoop() {
 //            pocisk.pozycjaPocisku();
             glm::mat4 M2 = glm::mat4(1.f);
             M2 = glm::translate(M2, pocisk.pozycjaPocisku(timePassed));
+            M2 = glm::rotate(M2, currentSnowman->getRotateLeft(), glm::vec3(0,1,0));
             M2 = glm::rotate(M2, -(float)3.141592/2, glm::vec3(1,0,0));
             MVP = P * currentSnowman->getView() * M2;
-            glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-            glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M2));
-            glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-            glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-            glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-            glUniform4f(snowmanShader.getU("lp2"),-100,50,0,1);
+            glUniformMatrix4fv(terrainShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+            glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M2));
+            glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+            glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+            glUniform4f(terrainShader.getU("lp"),0,50,-100,1);
+            glUniform4f(terrainShader.getU("lp2"),-100,50,0,1);
 
 
 
@@ -305,12 +306,12 @@ void Application::mainLoop() {
 
 
             MVP = P * currentSnowman->getView() * M3;
-            glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-            glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M3));
-            glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-            glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-            glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-            glUniform4f(snowmanShader.getU("lp2"),-100,50,0,1);
+            glUniformMatrix4fv(terrainShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+            glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M3));
+            glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+            glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+            glUniform4f(terrainShader.getU("lp"),0,50,-100,1);
+            glUniform4f(terrainShader.getU("lp2"),-100,50,0,1);
 
             sphere.bind();
             glDrawElements(GL_TRIANGLES, sphere.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
