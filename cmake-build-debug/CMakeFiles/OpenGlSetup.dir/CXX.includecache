@@ -228,16 +228,6 @@ iostream
 lodepng.h
 /Users/krzysztof/Documents/ProjektGrafika/lodepng.h
 
-/Users/krzysztof/Documents/ProjektGrafika/main.cpp
-iostream
--
-GL/glew.h
--
-GLFW/glfw3.h
--
-Application.h
-/Users/krzysztof/Documents/ProjektGrafika/Application.h
-
 /usr/local/include/GL/glew.h
 stddef.h
 -

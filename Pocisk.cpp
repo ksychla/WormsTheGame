@@ -14,9 +14,9 @@ Pocisk::~Pocisk(){
 }
 
 void Pocisk::strzal(glm::vec3 posStart, glm::vec3 velocity) {
-    vX = (velocity.x) * sila; //
+    vX = (velocity.x) * sila - wiatr.x; //
     vY = (velocity.y + (float)3.141592/2) * sila + 1; //
-    vZ = -velocity.z * sila; //* dlugosc sily
+    vZ = -velocity.z * sila - wiatr.z; //* dlugosc sily
     poprzednia = posStart;
     printf("%f %f %f\n", velocity.x, velocity.y, velocity.z);
     flagaPocisku = 2;

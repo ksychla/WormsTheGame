@@ -100,7 +100,7 @@ void Application::changeCamera(GLFWwindow *window, Snowman* snowman){
 
 glm::vec3 Application::losujWiatr() {
     glm::vec3 tmp;
-    int maxWiatr = 30;
+    int maxWiatr = 10;
     tmp.x = rand()%(2*maxWiatr)-maxWiatr;
     tmp.y = rand()%(2*maxWiatr)-maxWiatr;
     tmp.z = rand()%(2*maxWiatr)-maxWiatr;
@@ -116,6 +116,9 @@ GLuint Application::readTexture(const char* filename) {
     unsigned width, height;   //Zmienne do których wczytamy wymiary obrazka
     //Wczytaj obrazek
     unsigned error = lodepng::decode(image, width, height, filename);
+    printf("%d %d\n",error,image.size());
+
+
 
     //Import do pamięci karty graficznej
     glGenTextures(1,&texture); //Zainicjuj jeden uchwyt
@@ -237,7 +240,7 @@ void Application::mainLoop() {
         glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
         glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
         glUniform4f(terrainShader.getU("lp"),0,50,-100,1);
-        glUniform4f(terrainShader.getU("lp2"),0,50,100,1);
+        glUniform4f(terrainShader.getU("lp2"),-100,50,0,1);
 
 
 
@@ -268,6 +271,7 @@ void Application::mainLoop() {
         drawSnowman1(tex, snowmanMesh, P, MVP, snowman2, bazooka, healthRed);
 
 
+        snowmanShader.use();
         //printf("%d\n", pocisk.getFlaga());
         glm::vec3 tmpPozPocisku;
         if(pocisk.getFlaga() == 2){
@@ -282,7 +286,7 @@ void Application::mainLoop() {
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
             glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
             glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-            glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
+            glUniform4f(snowmanShader.getU("lp2"),-100,50,0,1);
 
 
 
@@ -306,7 +310,7 @@ void Application::mainLoop() {
             glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
             glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
             glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-            glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
+            glUniform4f(snowmanShader.getU("lp2"),-100,50,0,1);
 
             sphere.bind();
             glDrawElements(GL_TRIANGLES, sphere.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
@@ -345,25 +349,26 @@ void Application::mainLoop() {
     terrainShader.freeProgram();
     snowmanShader.freeProgram();
     guiShader.freeProgram();
+    glDeleteTextures(1,&tex);
 }
 
 void Application::drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P, glm::mat4 &MVP, Snowman *snowman,
                                Mesh &bazooka, int health)
 {
     if(health > 0){
-        snowmanShader.use();
+        terrainShader.use();
         MVP = P * currentSnowman->getView() * snowman->getModel();
         glm::mat4 M = snowman->getModel();
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"), 0, 50, -100, 1);
-        glUniform4f(snowmanShader.getU("lp2"), 0, 50, 100, 1);
+        glUniformMatrix4fv(terrainShader.getU("MVP"), 1, GL_FALSE, value_ptr(MVP));
+        glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, value_ptr(M));
+        glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, value_ptr(P));
+        glUniform4f(terrainShader.getU("lp"), 0, 50, -100, 1);
+        glUniform4f(terrainShader.getU("lp2"), -100,50,0,1);
 
-//        glUniform1i(snowmanShader.getU("textureMap"), 0);
-//        glActiveTexture(GL_TEXTURE0);
-//        glBindTexture(GL_TEXTURE_2D,tex);
+        glUniform1i(terrainShader.getU("textureMap"), 0);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D,tex);
 
         snowmanMesh.bind();
         glDrawElements(GL_TRIANGLES, snowmanMesh.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
@@ -373,12 +378,12 @@ void Application::drawSnowman1(GLuint tex, Mesh &snowmanMesh, const glm::mat4 &P
         M = glm::rotate(M, 1.7f, glm::vec3(0,1,0) );
         M = snowman->getModel() * M;
         MVP = P * currentSnowman->getView() * M;
-        glUniformMatrix4fv(snowmanShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
-        glUniformMatrix4fv(snowmanShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
-        glUniformMatrix4fv(snowmanShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
-        glUniformMatrix4fv(snowmanShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
-        glUniform4f(snowmanShader.getU("lp"),0,50,-100,1);
-        glUniform4f(snowmanShader.getU("lp2"),0,50,100,1);
+        glUniformMatrix4fv(terrainShader.getU("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(terrainShader.getU("M"), 1, GL_FALSE, glm::value_ptr(M));
+        glUniformMatrix4fv(terrainShader.getU("V"), 1, GL_FALSE, glm::value_ptr(currentCamera->getView()));
+        glUniformMatrix4fv(terrainShader.getU("P"), 1, GL_FALSE, glm::value_ptr(P));
+        glUniform4f(terrainShader.getU("lp"),0,50,-100,1);
+        glUniform4f(terrainShader.getU("lp2"),-100,50,0,1);
 
         bazooka.bind();
         glDrawElements(GL_TRIANGLES, bazooka.getIndiciesCount(), GL_UNSIGNED_INT, nullptr);
@@ -395,12 +400,12 @@ void Application::setRenderBehaviour() {
     );
 }
 
-//TODO kat wystrzalu //z pierwszej kamery do pocisku 👌(KINDA)
+//TODO kat wystrzalu //z pierwszej kamery do pocisku 👌
 //TODO drógie źródło światła 👌
 //TODO dopisanie akcji nacisku myszki w strzelaniu 👌
 //TODO (NIE) pasek sily
 //TODO tracenie zdrowia robaka 👌
 //TODO rysuj balwana jesli healtsdfjshdk > 0 👌
-//TODO naprawić kamere
+//TODO naprawić kamere 👌
 //TODO tekstura
 //TODO przelaczanie kamery 👌

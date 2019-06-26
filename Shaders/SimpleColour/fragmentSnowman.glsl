@@ -5,15 +5,15 @@ in vec3 iColor;
 in vec4 l;
 in vec4 n;
 in vec4 v;
-//in vec2 texCoord;
+in vec2 texCoord;
 
-//uniform sampler2D textureMap;
+uniform sampler2D textureMap;
 
 layout(location = 0) out vec4 out_Color;
 
 void main() {
-    vec4 kd=vec4(iColor, 1.0); //Kolor materia�u dla �wiat�a rozpraszanego
-//    vec4 kd=texture(textureMap,texCoord);  //Kolor materia?u dla ?wiat?a  rozpraszanego
+//    vec4 kd=vec4(iColor, 1.0); //Kolor materia�u dla �wiat�a rozpraszanego
+    vec4 kd=texture(textureMap,texCoord);  //Kolor materia?u dla ?wiat?a  rozpraszanego
     vec4 ld=vec4(1,1,1,1); //Kolor �wiat�a rozpraszanwego
     vec4 ks=vec4(1,1,1,1); //Kolor odbi� materia�u
     vec4 ls=vec4(1,1,1,1); //Kolor �wiat�a odbijanego
@@ -27,8 +27,8 @@ void main() {
     float rv=pow(clamp(dot(mr,mv),0,1),10); //cos k�ta pomi�dzy wektorami r i v podniesiony do pot�gi (wyk�adnik Phonga)
 
 //    out_Color=vec4(kd.rgb*ld.rgb*nl+ks.rgb*ls.rgb*rv, 1.0);
-
-        out_Color=vec4(kd.rgb*ld.rgb*nl+ks.rgb*ls.rgb*rv,kd.a) + vec4(iColor/2, 1.0);
+    out_Color = kd;// vec4(texCoord,0,1);
+//        out_Color=vec4(kd.rgb*ld.rgb*nl+ks.rgb*ls.rgb*rv,kd.a) + vec4(iColor/2, 1.0);
     //    out_Color = vec4(iColor,1.f);
 }
 
